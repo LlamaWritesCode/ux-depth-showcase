@@ -38,6 +38,8 @@ export const Work = () => {
   return (
     <section id="work" className="py-40 relative overflow-hidden">
       <ScrollHexagons sectionIndex={1} />
+      {/* Rich background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-pink-100/40 via-orange-100/40 to-red-100/40" />
       
       <div className="container mx-auto px-6 relative z-10">
         <div ref={ref}>
@@ -50,10 +52,10 @@ export const Work = () => {
             <h2 className="text-5xl md:text-6xl font-light mb-8 text-foreground/90">
               Selected Work
             </h2>
-            <div className="w-16 h-0.5 bg-gradient-to-r from-red-300 to-orange-300 mx-auto rounded-full" />
+            <div className="w-16 h-0.5 bg-gradient-to-r from-red-400 to-orange-400 mx-auto rounded-full" />
           </motion.div>
 
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <motion.div
                 key={index}
@@ -63,39 +65,60 @@ export const Work = () => {
                 className={`group relative ${project.span}`}
               >
                 {/* Glow effect */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-red-300/50 to-orange-300/50 rounded-3xl blur-lg opacity-0 group-hover:opacity-100 transition duration-1000" />
+                <div className="absolute -inset-1 bg-gradient-to-r from-red-400/60 to-orange-400/60 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition duration-1000" />
                 
                 <motion.div
                   whileHover={{ y: -8 }}
                   transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                  className="relative overflow-hidden rounded-3xl bg-white/40 backdrop-blur-2xl border border-white/20 hover:border-white/30 transition-all duration-700 h-full shadow-xl hover:shadow-2xl"
+                  className="relative overflow-hidden rounded-3xl h-full shadow-2xl"
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.2)',
+                    backdropFilter: 'blur(30px) saturate(180%)',
+                    WebkitBackdropFilter: 'blur(30px) saturate(180%)',
+                    border: '1px solid rgba(255, 255, 255, 0.3)',
+                    boxShadow: '0 8px 32px 0 rgba(252, 165, 165, 0.15)',
+                  }}
                 >
                   {/* Image container */}
                   <div className="aspect-[4/3] overflow-hidden relative">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105"
+                      className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110"
                     />
                     {/* Gradient overlay on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                     
-                    {/* Floating button */}
+                    {/* Floating glass button */}
                     <motion.div
                       initial={{ opacity: 0, scale: 0.8, y: 20 }}
                       whileHover={{ scale: 1.1 }}
-                      className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/90 backdrop-blur-xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 shadow-lg hover:shadow-xl"
+                      className="absolute top-6 right-6 w-14 h-14 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500"
+                      style={{
+                        background: 'rgba(255, 255, 255, 0.25)',
+                        backdropFilter: 'blur(20px)',
+                        WebkitBackdropFilter: 'blur(20px)',
+                        border: '1px solid rgba(255, 255, 255, 0.3)',
+                        boxShadow: '0 4px 16px 0 rgba(0, 0, 0, 0.1)',
+                      }}
                     >
-                      <ArrowUpRight className="w-5 h-5 text-red-400" />
+                      <ArrowUpRight className="w-6 h-6 text-white" />
                     </motion.div>
                   </div>
                   
-                  {/* Content */}
-                  <div className="p-8 bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm">
-                    <p className="text-xs font-medium text-red-400 mb-3 tracking-wider uppercase">
+                  {/* Content with glass effect */}
+                  <div 
+                    className="p-8"
+                    style={{
+                      background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
+                      backdropFilter: 'blur(10px)',
+                      WebkitBackdropFilter: 'blur(10px)',
+                    }}
+                  >
+                    <p className="text-xs font-medium text-red-500 mb-3 tracking-wider uppercase">
                       {project.category}
                     </p>
-                    <h3 className="text-2xl md:text-3xl font-light text-foreground/90 group-hover:text-red-500 transition-colors duration-500">
+                    <h3 className="text-2xl md:text-3xl font-light text-foreground/90 group-hover:text-red-600 transition-colors duration-500">
                       {project.title}
                     </h3>
                   </div>
