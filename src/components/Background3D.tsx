@@ -29,12 +29,12 @@ const AnimatedBubble = ({ position, scale, color, speed }: {
       <MeshDistortMaterial
         color={color}
         attach="material"
-        distort={0.3}
-        speed={2}
+        distort={0.2}
+        speed={1.5}
         transparent
-        opacity={0.6}
-        roughness={0.2}
-        metalness={0.8}
+        opacity={0.15}
+        roughness={0.1}
+        metalness={0.3}
       />
     </Sphere>
   );
@@ -48,14 +48,10 @@ export const Background3D = () => {
         <directionalLight position={[10, 10, 5]} intensity={1} />
         <pointLight position={[-10, -10, -5]} intensity={0.5} color="#ff6b6b" />
         
-        {/* Multiple floating bubbles */}
-        <AnimatedBubble position={[-3, 2, 0]} scale={1.2} color="#ef4444" speed={0.5} />
-        <AnimatedBubble position={[3, -1, -2]} scale={1.5} color="#f97316" speed={0.7} />
-        <AnimatedBubble position={[0, 3, -1]} scale={1} color="#fb923c" speed={0.6} />
-        <AnimatedBubble position={[-2, -2, 1]} scale={0.8} color="#fbbf24" speed={0.8} />
-        <AnimatedBubble position={[4, 1, -3]} scale={1.3} color="#f87171" speed={0.4} />
-        <AnimatedBubble position={[-4, 0, 2]} scale={0.9} color="#fb7185" speed={0.9} />
-        <AnimatedBubble position={[2, 2, 1]} scale={1.1} color="#ff8a80" speed={0.55} />
+        {/* Cute floating bubbles */}
+        <AnimatedBubble position={[-2, 1, 0]} scale={1.5} color="#fbbf24" speed={0.4} />
+        <AnimatedBubble position={[3, -1, -1]} scale={1.8} color="#fb923c" speed={0.3} />
+        <AnimatedBubble position={[0, 2, -2]} scale={1.2} color="#f87171" speed={0.5} />
       </Canvas>
     </div>
   );
