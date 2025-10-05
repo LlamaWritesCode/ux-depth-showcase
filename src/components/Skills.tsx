@@ -55,7 +55,7 @@ export const Skills = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-16"
           >
-            <div className="folded-corner border-4 border-foreground bg-card p-8">
+            <div className="border-4 border-foreground bg-card p-8">
               <h3 className="text-3xl font-serif font-bold mb-6 pb-4 border-b-2 border-foreground">
                 Core Skills
               </h3>
@@ -66,9 +66,9 @@ export const Skills = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.4, delay: 0.3 + index * 0.05 }}
-                    className="border-2 border-foreground p-4 text-center font-mono uppercase text-sm tracking-wider hover:bg-foreground hover:text-background transition-all duration-300 cursor-pointer"
+                    className="border-2 border-foreground p-4 text-center font-serif hover:bg-foreground hover:text-background transition-all duration-300 cursor-pointer"
                   >
-                    {skill}
+                    • {skill}
                   </motion.div>
                 ))}
               </div>
@@ -81,7 +81,7 @@ export const Skills = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <div className="folded-corner border-4 border-foreground bg-card p-8">
+            <div className="border-4 border-foreground bg-card p-8">
               <h3 className="text-3xl font-serif font-bold mb-6 pb-4 border-b-2 border-foreground">
                 Tools of the Trade
               </h3>
