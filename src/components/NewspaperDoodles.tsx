@@ -12,7 +12,7 @@ export const NewspaperDoodles = () => {
         height="40"
         viewBox="0 0 40 40"
         animate={{ rotate: 360 }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
       >
         <path
           d="M20 5 L22 15 L30 12 L24 20 L32 25 L22 23 L20 33 L18 23 L8 25 L16 20 L10 12 L18 15 Z"
@@ -31,7 +31,7 @@ export const NewspaperDoodles = () => {
         height="60"
         viewBox="0 0 60 60"
         animate={{ y: [0, -10, 0] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
       >
         <path
           d="M10 30 Q30 10 50 30"
@@ -50,7 +50,7 @@ export const NewspaperDoodles = () => {
         height="50"
         viewBox="0 0 50 50"
         animate={{ rotate: -360 }}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
       >
         <circle
           cx="25"
@@ -71,7 +71,7 @@ export const NewspaperDoodles = () => {
         height="30"
         viewBox="0 0 80 30"
         animate={{ x: [0, 5, 0] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
         <path
           d="M5 15 Q15 5 25 15 Q35 25 45 15 Q55 5 65 15 Q75 25 80 15"
@@ -89,7 +89,7 @@ export const NewspaperDoodles = () => {
         height="35"
         viewBox="0 0 35 35"
         animate={{ scale: [1, 1.1, 1] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
       >
         <path
           d="M17.5 30 C17.5 30 5 20 5 12 C5 7 8 5 11 5 C14 5 17.5 8 17.5 8 C17.5 8 21 5 24 5 C27 5 30 7 30 12 C30 20 17.5 30 17.5 30 Z"
@@ -108,7 +108,7 @@ export const NewspaperDoodles = () => {
         height="45"
         viewBox="0 0 30 45"
         animate={{ opacity: [0.5, 1, 0.5] }}
-        transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
       >
         <path
           d="M15 5 L10 20 L18 20 L12 40 L20 18 L14 18 Z"
@@ -127,7 +127,7 @@ export const NewspaperDoodles = () => {
         height="20"
         viewBox="0 0 100 20"
         animate={{ x: [0, -5, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
       >
         <path
           d="M5 10 Q20 5 40 10 Q60 15 80 10 Q90 5 95 10"
@@ -145,7 +145,7 @@ export const NewspaperDoodles = () => {
         height="50"
         viewBox="0 0 60 50"
         animate={{ rotate: [0, 5, 0, -5, 0] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
       >
         <rect
           x="5"
@@ -167,7 +167,7 @@ export const NewspaperDoodles = () => {
         height="25"
         viewBox="0 0 25 25"
         animate={{ rotate: 360 }}
-        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
       >
         <path d="M12.5 5 L12.5 20 M5 12.5 L20 12.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
       </motion.svg>
@@ -179,7 +179,7 @@ export const NewspaperDoodles = () => {
         height="30"
         viewBox="0 0 30 30"
         animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
       >
         <path d="M15 3 L16 14 L15 25 L14 14 Z M3 15 L14 16 L25 15 L14 14 Z" fill="currentColor" />
       </motion.svg>
