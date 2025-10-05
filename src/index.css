@@ -44,6 +44,9 @@ All colors MUST be HSL.
     --pastel-blue: 210 70% 88%;
     --pastel-mint: 160 55% 85%;
     --pastel-peach: 20 80% 88%;
+    --pastel-salmon: 0 85% 80%;
+    --pastel-coral: 10 90% 82%;
+    --pastel-rose: 350 80% 85%;
     
     /* Gradients */
     --gradient-soft: linear-gradient(135deg, hsl(280 70% 95%) 0%, hsl(340 75% 95%) 50%, hsl(210 70% 95%) 100%);
