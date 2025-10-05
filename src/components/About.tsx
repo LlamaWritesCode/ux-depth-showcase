@@ -43,7 +43,7 @@ export const About = () => {
             
             {/* Doodles overlapping the illustration */}
             <motion.svg
-              className="absolute top-8 left-12 w-20 h-20 text-foreground opacity-30 z-10"
+              className="absolute top-8 left-12 w-12 h-12 text-foreground opacity-35 z-10"
               viewBox="0 0 40 40"
               animate={{ rotate: 360 }}
               transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
@@ -52,12 +52,14 @@ export const About = () => {
                 d="M20 5 L22 15 L30 12 L24 20 L32 25 L22 23 L20 33 L18 23 L8 25 L16 20 L10 12 L18 15 Z"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="2"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </motion.svg>
 
             <motion.svg
-              className="absolute top-4 right-16 w-16 h-16 text-foreground opacity-30 z-10"
+              className="absolute top-4 right-16 w-10 h-10 text-foreground opacity-35 z-10"
               viewBox="0 0 35 35"
               animate={{ scale: [1, 1.1, 1] }}
               transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
@@ -66,17 +68,19 @@ export const About = () => {
                 d="M17.5 30 C17.5 30 5 20 5 12 C5 7 8 5 11 5 C14 5 17.5 8 17.5 8 C17.5 8 21 5 24 5 C27 5 30 7 30 12 C30 20 17.5 30 17.5 30 Z"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="2"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </motion.svg>
 
             <motion.svg
-              className="absolute bottom-8 right-12 w-14 h-14 text-foreground opacity-30 z-10"
+              className="absolute bottom-8 right-12 w-10 h-10 text-foreground opacity-35 z-10"
               viewBox="0 0 25 25"
               animate={{ rotate: 360 }}
               transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
             >
-              <path d="M12.5 5 L12.5 20 M5 12.5 L20 12.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              <path d="M12.5 5 L12.5 20 M5 12.5 L20 12.5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
             </motion.svg>
           </motion.div>
 
