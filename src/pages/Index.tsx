@@ -8,9 +8,13 @@ const Index = () => {
   return (
     <main className="overflow-x-hidden">
       <Hero />
+      <div className="newspaper-fold" />
       <About />
+      <div className="newspaper-fold" />
       <Work />
+      <div className="newspaper-fold" />
       <Skills />
+      <div className="newspaper-fold" />
       <Contact />
     </main>
   );

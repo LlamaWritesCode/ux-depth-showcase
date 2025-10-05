@@ -108,4 +108,59 @@ All colors MUST be HSL.
   .text-balance {
     text-wrap: balance;
   }
+  
+  /* Newspaper fold/crease effect */
+  .newspaper-fold {
+    position: relative;
+    padding: 3rem 0;
+  }
+  
+  .newspaper-fold::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(
+      to bottom,
+      hsl(var(--foreground) / 0.15) 0%,
+      hsl(var(--foreground) / 0.08) 50%,
+      transparent 100%
+    );
+    box-shadow: 
+      0 1px 2px hsl(var(--foreground) / 0.1),
+      0 -1px 0px hsl(var(--background));
+  }
+  
+  .newspaper-fold::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(
+      to bottom,
+      hsl(var(--foreground) / 0.03) 0%,
+      transparent 100%
+    );
+    pointer-events: none;
+  }
+  
+  /* Animated crease on scroll */
+  @keyframes crease-reveal {
+    from {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+    to {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+  
+  .newspaper-fold.in-view::before {
+    animation: crease-reveal 0.8s ease-out;
+  }
 }
