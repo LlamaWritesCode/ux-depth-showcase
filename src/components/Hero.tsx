@@ -1,11 +1,15 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Sparkles } from 'lucide-react';
+import { Background3D } from './Background3D';
 
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* 3D Bubble Background */}
+      <Background3D />
+      
       {/* Rich gradient background for glass effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-red-100 via-orange-100 to-pink-100" />
+      <div className="absolute inset-0 bg-gradient-to-br from-red-100 via-orange-100 to-pink-100 opacity-40" />
 
       {/* Animated blobs - stronger colors */}
       <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-red-400 to-orange-400 opacity-40 rounded-full blur-3xl animate-blob" />
