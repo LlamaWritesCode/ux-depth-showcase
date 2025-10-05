@@ -29,12 +29,12 @@ const AnimatedBubble = ({ position, scale, color, speed }: {
       <MeshDistortMaterial
         color={color}
         attach="material"
-        distort={0.2}
-        speed={1.5}
+        distort={0.1}
+        speed={1}
         transparent
-        opacity={0.15}
+        opacity={0.08}
         roughness={0.1}
-        metalness={0.3}
+        metalness={0.2}
       />
     </Sphere>
   );
