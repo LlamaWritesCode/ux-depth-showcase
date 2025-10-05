@@ -2,12 +2,12 @@ import { motion } from 'framer-motion';
 
 export const NewspaperDoodles = () => {
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none opacity-40 z-0">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40">
       {/* Hand-drawn doodle elements scattered across the background */}
       
       {/* Stars */}
       <motion.svg
-        className="absolute top-[5vh] left-[5vw]"
+        className="absolute top-20 left-10"
         width="40"
         height="40"
         viewBox="0 0 40 40"
@@ -26,7 +26,7 @@ export const NewspaperDoodles = () => {
 
       {/* Cute flower */}
       <motion.svg
-        className="absolute top-[15vh] right-[10vw]"
+        className="absolute top-40 right-20"
         width="50"
         height="50"
         viewBox="0 0 50 50"
@@ -44,7 +44,7 @@ export const NewspaperDoodles = () => {
 
       {/* Scribble circle */}
       <motion.svg
-        className="absolute top-[70vh] left-[8vw]"
+        className="absolute bottom-40 left-20"
         width="50"
         height="50"
         viewBox="0 0 50 50"
@@ -65,7 +65,7 @@ export const NewspaperDoodles = () => {
 
       {/* Squiggle */}
       <motion.svg
-        className="absolute top-[25vh] left-[20vw]"
+        className="absolute top-1/2 left-1/4"
         width="80"
         height="30"
         viewBox="0 0 80 30"
@@ -83,7 +83,7 @@ export const NewspaperDoodles = () => {
 
       {/* Heart */}
       <motion.svg
-        className="absolute top-[55vh] right-[22vw]"
+        className="absolute bottom-1/3 right-1/4"
         width="35"
         height="35"
         viewBox="0 0 35 35"
@@ -102,7 +102,7 @@ export const NewspaperDoodles = () => {
 
       {/* Lightning bolt */}
       <motion.svg
-        className="absolute top-[35vh] right-[28vw]"
+        className="absolute top-1/3 right-1/3"
         width="30"
         height="45"
         viewBox="0 0 30 45"
@@ -121,7 +121,7 @@ export const NewspaperDoodles = () => {
 
       {/* Underline scribble */}
       <motion.svg
-        className="absolute top-[80vh] right-[30vw]"
+        className="absolute bottom-20 right-1/3"
         width="100"
         height="20"
         viewBox="0 0 100 20"
@@ -139,7 +139,7 @@ export const NewspaperDoodles = () => {
 
       {/* Speech bubble */}
       <motion.svg
-        className="absolute top-[40vh] left-[25vw]"
+        className="absolute top-1/4 left-1/3"
         width="60"
         height="50"
         viewBox="0 0 60 50"
@@ -161,7 +161,7 @@ export const NewspaperDoodles = () => {
 
       {/* Plus signs */}
       <motion.svg
-        className="absolute top-[90vh] left-[45vw]"
+        className="absolute bottom-1/4 left-1/2"
         width="25"
         height="25"
         viewBox="0 0 25 25"
@@ -173,7 +173,7 @@ export const NewspaperDoodles = () => {
 
       {/* Sparkles */}
       <motion.svg
-        className="absolute top-[110vh] right-[12vw]"
+        className="absolute top-2/3 right-20"
         width="30"
         height="30"
         viewBox="0 0 30 30"
@@ -185,7 +185,7 @@ export const NewspaperDoodles = () => {
 
       {/* Lightbulb */}
       <motion.svg
-        className="absolute top-[130vh] right-[6vw]"
+        className="absolute top-1/2 right-10"
         width="35"
         height="50"
         viewBox="0 0 35 50"
@@ -200,7 +200,7 @@ export const NewspaperDoodles = () => {
 
       {/* Coffee cup */}
       <motion.svg
-        className="absolute top-[150vh] left-[7vw]"
+        className="absolute bottom-1/2 left-10"
         width="40"
         height="45"
         viewBox="0 0 40 45"
@@ -218,7 +218,7 @@ export const NewspaperDoodles = () => {
 
       {/* Asterisk */}
       <motion.svg
-        className="absolute top-[170vh] right-[15vw]"
+        className="absolute top-1/4 right-10"
         width="30"
         height="30"
         viewBox="0 0 30 30"
@@ -230,7 +230,7 @@ export const NewspaperDoodles = () => {
 
       {/* Exclamation mark */}
       <motion.svg
-        className="absolute top-[190vh] right-[40vw]"
+        className="absolute bottom-1/2 right-1/2"
         width="20"
         height="40"
         viewBox="0 0 20 40"
@@ -243,7 +243,7 @@ export const NewspaperDoodles = () => {
 
       {/* Musical note */}
       <motion.svg
-        className="absolute top-[210vh] left-[18vw]"
+        className="absolute top-3/4 left-1/3"
         width="30"
         height="40"
         viewBox="0 0 30 40"
@@ -257,7 +257,7 @@ export const NewspaperDoodles = () => {
 
       {/* Small dots cluster */}
       <motion.svg
-        className="absolute top-[230vh] left-[10vw]"
+        className="absolute top-1/3 left-10"
         width="40"
         height="40"
         viewBox="0 0 40 40"
@@ -274,7 +274,7 @@ export const NewspaperDoodles = () => {
 
       {/* Pencil */}
       <motion.svg
-        className="absolute top-[250vh] left-[32vw]"
+        className="absolute bottom-1/3 left-1/3"
         width="50"
         height="50"
         viewBox="0 0 50 50"
@@ -289,7 +289,7 @@ export const NewspaperDoodles = () => {
 
       {/* Cloud */}
       <motion.svg
-        className="absolute top-[270vh] left-[50vw]"
+        className="absolute top-1/2 left-1/2"
         width="60"
         height="40"
         viewBox="0 0 60 40"
@@ -301,7 +301,7 @@ export const NewspaperDoodles = () => {
 
       {/* Question mark */}
       <motion.svg
-        className="absolute top-[290vh] left-[24vw]"
+        className="absolute bottom-20 left-1/4"
         width="25"
         height="45"
         viewBox="0 0 25 45"
@@ -314,7 +314,7 @@ export const NewspaperDoodles = () => {
 
       {/* Sun */}
       <motion.svg
-        className="absolute top-[310vh] right-[35vw]"
+        className="absolute top-10 right-1/3"
         width="45"
         height="45"
         viewBox="0 0 45 45"
@@ -327,7 +327,7 @@ export const NewspaperDoodles = () => {
 
       {/* Checkmark */}
       <motion.svg
-        className="absolute top-[330vh] right-[26vw]"
+        className="absolute bottom-10 right-1/4"
         width="35"
         height="35"
         viewBox="0 0 35 35"
