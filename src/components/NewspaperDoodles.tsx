@@ -183,16 +183,19 @@ export const NewspaperDoodles = () => {
         <path d="M15 3 L16 14 L15 25 L14 14 Z M3 15 L14 16 L25 15 L14 14 Z" fill="currentColor" />
       </motion.svg>
 
-      {/* Arrow pointing right */}
+      {/* Lightbulb */}
       <motion.svg
         className="absolute top-1/2 right-10"
-        width="50"
-        height="30"
-        viewBox="0 0 50 30"
-        animate={{ x: [0, 8, 0] }}
-        transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
+        width="35"
+        height="50"
+        viewBox="0 0 35 50"
+        animate={{ opacity: [0.6, 1, 0.6] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
-        <path d="M5 15 L35 15 M30 10 L38 15 L30 20" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M17.5 5 Q10 5 10 12 Q10 18 14 22 L14 30 L21 30 L21 22 Q25 18 25 12 Q25 5 17.5 5 Z" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        <rect x="14" y="30" width="7" height="4" stroke="currentColor" strokeWidth="1.5" fill="none" rx="1" />
+        <path d="M15 34 Q17.5 36 20 34" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        <path d="M12 15 L8 13 M23 15 L27 13 M17.5 8 L17.5 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </motion.svg>
 
       {/* Coffee cup */}
@@ -284,17 +287,16 @@ export const NewspaperDoodles = () => {
         <path d="M10 40 L8 48 L15 45" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
       </motion.svg>
 
-      {/* Curved arrow */}
+      {/* Cloud */}
       <motion.svg
         className="absolute top-1/2 left-1/2"
-        width="50"
-        height="50"
-        viewBox="0 0 50 50"
-        animate={{ rotate: [0, -360] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+        width="60"
+        height="40"
+        viewBox="0 0 60 40"
+        animate={{ x: [0, 10, 0] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
       >
-        <path d="M25 10 Q35 15 35 25 Q35 35 25 40" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-        <path d="M32 38 L25 40 L27 33" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
+        <path d="M15 25 Q15 20 20 20 Q20 15 27 15 Q34 15 34 20 Q40 20 40 25 Q40 30 34 30 L20 30 Q15 30 15 25 Z" stroke="currentColor" strokeWidth="1.5" fill="none" />
       </motion.svg>
 
       {/* Question mark */}
