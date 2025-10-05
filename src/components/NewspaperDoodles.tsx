@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export const NewspaperDoodles = () => {
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
       {/* Hand-drawn doodle elements scattered across the background */}
       
       {/* Stars */}
