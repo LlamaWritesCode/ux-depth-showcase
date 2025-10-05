@@ -66,9 +66,9 @@ export const Skills = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.4, delay: 0.3 + index * 0.05 }}
-                    className="border-2 border-foreground p-4 text-center font-serif hover:bg-foreground hover:text-background transition-all duration-300 cursor-pointer"
+                    className="border-2 border-foreground p-4 text-center font-mono uppercase text-sm tracking-wider hover:bg-foreground hover:text-background transition-all duration-300 cursor-pointer"
                   >
-                    • {skill}
+                    {skill}
                   </motion.div>
                 ))}
               </div>
