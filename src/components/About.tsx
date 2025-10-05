@@ -33,7 +33,7 @@ export const About = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mb-12 border-4 border-foreground overflow-hidden shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+            className="mb-12 overflow-hidden"
           >
             <img 
               src={aboutIllustration} 
