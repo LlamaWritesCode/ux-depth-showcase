@@ -8,7 +8,7 @@ export const About = () => {
 
   return (
     <section id="about" className="py-40 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-50/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-50/20 to-transparent" />
       
       <div className="container mx-auto px-6 relative z-10">
         <div ref={ref} className="max-w-3xl mx-auto">
@@ -21,7 +21,7 @@ export const About = () => {
             <h2 className="text-5xl md:text-6xl font-light mb-8 text-foreground/90">
               About
             </h2>
-            <div className="w-16 h-0.5 bg-gradient-to-r from-purple-300 to-pink-300 mx-auto rounded-full" />
+            <div className="w-16 h-0.5 bg-gradient-to-r from-red-300 to-orange-300 mx-auto rounded-full" />
           </motion.div>
 
           <motion.div
@@ -53,7 +53,7 @@ export const About = () => {
               { label: 'Clients', value: '30+' },
             ].map((stat, index) => (
               <div key={index}>
-                <div className="text-3xl md:text-4xl font-light text-purple-400 mb-2">
+                <div className="text-3xl md:text-4xl font-light text-red-400 mb-2">
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground/60">

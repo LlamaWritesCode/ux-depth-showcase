@@ -18,7 +18,7 @@ function FloatingShape() {
       <mesh ref={meshRef}>
         <sphereGeometry args={[1.5, 64, 64]} />
         <MeshDistortMaterial
-          color="#e9d5ff"
+          color="#fecaca"
           attach="material"
           distort={0.3}
           speed={1.5}
@@ -42,7 +42,7 @@ export const Hero3D = () => {
         <color attach="background" args={['transparent']} />
         <ambientLight intensity={0.8} />
         <directionalLight position={[3, 3, 3]} intensity={0.3} />
-        <pointLight position={[0, 0, 2]} intensity={0.2} color="#e9d5ff" />
+        <pointLight position={[0, 0, 2]} intensity={0.2} color="#fecaca" />
         
         <FloatingShape />
       </Canvas>

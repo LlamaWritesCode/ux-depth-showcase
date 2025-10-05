@@ -31,8 +31,8 @@ export const Work = () => {
 
   return (
     <section id="work" className="py-40 relative overflow-hidden">
-      <div className="absolute top-1/3 -right-32 w-[500px] h-[500px] bg-purple-200/10 rounded-full blur-3xl animate-float-slow" />
-      <div className="absolute bottom-1/3 -left-32 w-[500px] h-[500px] bg-pink-200/10 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: '3s' }} />
+      <div className="absolute top-1/3 -right-32 w-[500px] h-[500px] bg-red-200/10 rounded-full blur-3xl animate-float-slow" />
+      <div className="absolute bottom-1/3 -left-32 w-[500px] h-[500px] bg-orange-200/10 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: '3s' }} />
       
       <div className="container mx-auto px-6 relative z-10">
         <div ref={ref}>
@@ -45,7 +45,7 @@ export const Work = () => {
             <h2 className="text-5xl md:text-6xl font-light mb-8 text-foreground/90">
               Selected Work
             </h2>
-            <div className="w-16 h-0.5 bg-gradient-to-r from-purple-300 to-pink-300 mx-auto rounded-full" />
+            <div className="w-16 h-0.5 bg-gradient-to-r from-red-300 to-orange-300 mx-auto rounded-full" />
           </motion.div>
 
           <div className="max-w-5xl mx-auto space-y-32">
@@ -58,7 +58,7 @@ export const Work = () => {
                 className="group"
               >
                 <div className="relative overflow-hidden rounded-3xl">
-                  <div className="aspect-[16/10] overflow-hidden bg-gradient-to-br from-purple-50 to-pink-50">
+                  <div className="aspect-[16/10] overflow-hidden bg-gradient-to-br from-red-50 to-orange-50">
                     <img
                       src={project.image}
                       alt={project.title}
@@ -67,7 +67,7 @@ export const Work = () => {
                   </div>
                   
                   <div className="mt-8 text-center">
-                    <p className="text-sm font-light text-purple-400 mb-2 tracking-wide uppercase">
+                    <p className="text-sm font-light text-red-400 mb-2 tracking-wide uppercase">
                       {project.category}
                     </p>
                     <h3 className="text-2xl md:text-3xl font-light text-foreground/90">

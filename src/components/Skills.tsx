@@ -26,7 +26,7 @@ export const Skills = () => {
 
   return (
     <section id="skills" className="py-40 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-pink-50/20 via-purple-50/20 to-blue-50/20" />
+      <div className="absolute inset-0 bg-gradient-to-b from-rose-50/20 via-orange-50/20 to-red-50/20" />
       
       <div className="container mx-auto px-6 relative z-10">
         <div ref={ref} className="max-w-4xl mx-auto">
@@ -39,7 +39,7 @@ export const Skills = () => {
             <h2 className="text-5xl md:text-6xl font-light mb-8 text-foreground/90">
               Expertise
             </h2>
-            <div className="w-16 h-0.5 bg-gradient-to-r from-purple-300 to-pink-300 mx-auto rounded-full" />
+            <div className="w-16 h-0.5 bg-gradient-to-r from-red-300 to-orange-300 mx-auto rounded-full" />
           </motion.div>
 
           <motion.div
@@ -58,7 +58,7 @@ export const Skills = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ duration: 0.6, delay: 0.4 + index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                  className="px-6 py-3 bg-white/40 backdrop-blur-sm border border-purple-100/50 rounded-full text-foreground/80 font-light transition-all duration-500 hover:bg-white/60 hover:border-purple-200"
+                  className="px-6 py-3 bg-white/40 backdrop-blur-sm border border-red-100/50 rounded-full text-foreground/80 font-light transition-all duration-500 hover:bg-white/60 hover:border-red-200"
                 >
                   {skill}
                 </motion.div>
@@ -81,7 +81,7 @@ export const Skills = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ duration: 0.6, delay: 0.7 + index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                  className="px-6 py-3 bg-white/40 backdrop-blur-sm border border-purple-100/50 rounded-full text-foreground/80 font-light transition-all duration-500 hover:bg-white/60 hover:border-purple-200"
+                  className="px-6 py-3 bg-white/40 backdrop-blur-sm border border-red-100/50 rounded-full text-foreground/80 font-light transition-all duration-500 hover:bg-white/60 hover:border-red-200"
                 >
                   {tool}
                 </motion.div>
