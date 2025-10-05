@@ -41,7 +41,7 @@ export const About = () => {
             <img 
               src={aboutIllustration} 
               alt="Designer at work" 
-              className="w-full h-auto relative z-0"
+              className="w-full h-auto relative z-0 mix-blend-multiply opacity-80"
             />
             
             {/* Doodles overlapping the illustration */}
