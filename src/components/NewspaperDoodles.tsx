@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Send } from 'lucide-react';
 
 export const NewspaperDoodles = () => {
   return (
@@ -182,6 +183,102 @@ export const NewspaperDoodles = () => {
       >
         <path d="M15 3 L16 14 L15 25 L14 14 Z M3 15 L14 16 L25 15 L14 14 Z" fill="currentColor" />
       </motion.svg>
+
+      {/* Paper plane 1: Left to Right */}
+      <div className="absolute top-1/4 left-0 w-full h-20">
+        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 100">
+          <path
+            id="plane-path-1"
+            d="M -50 50 L 1050 50"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1"
+            strokeDasharray="2 15"
+            opacity="0.5"
+          />
+        </svg>
+        <motion.div
+          className="absolute"
+          initial={{ offsetDistance: "0%" }}
+          animate={{ offsetDistance: "100%" }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "linear",
+            repeatDelay: 2
+          }}
+          style={{
+            offsetPath: "path('M -50 50 L 1050 50')",
+            offsetRotate: "0deg"
+          }}
+        >
+          <Send className="w-6 h-6 -rotate-45" />
+        </motion.div>
+      </div>
+
+      {/* Paper plane 2: Right to Left */}
+      <div className="absolute top-1/2 left-0 w-full h-20">
+        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 100">
+          <path
+            id="plane-path-2"
+            d="M 1050 50 L -50 50"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1"
+            strokeDasharray="2 15"
+            opacity="0.5"
+          />
+        </svg>
+        <motion.div
+          className="absolute"
+          initial={{ offsetDistance: "0%" }}
+          animate={{ offsetDistance: "100%" }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "linear",
+            repeatDelay: 1
+          }}
+          style={{
+            offsetPath: "path('M 1050 50 L -50 50')",
+            offsetRotate: "0deg"
+          }}
+        >
+          <Send className="w-6 h-6 rotate-[135deg]" />
+        </motion.div>
+      </div>
+
+      {/* Paper plane 3: Left to Right (lower) */}
+      <div className="absolute bottom-1/4 left-0 w-full h-20">
+        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 100">
+          <path
+            id="plane-path-3"
+            d="M -50 50 L 1050 50"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1"
+            strokeDasharray="2 15"
+            opacity="0.5"
+          />
+        </svg>
+        <motion.div
+          className="absolute"
+          initial={{ offsetDistance: "0%" }}
+          animate={{ offsetDistance: "100%" }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "linear",
+            repeatDelay: 3
+          }}
+          style={{
+            offsetPath: "path('M -50 50 L 1050 50')",
+            offsetRotate: "0deg"
+          }}
+        >
+          <Send className="w-6 h-6 -rotate-45" />
+        </motion.div>
+      </div>
     </div>
   );
 };
