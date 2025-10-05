@@ -33,12 +33,67 @@ export const About = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mb-12 overflow-hidden -mt-16"
+            className="mb-12 overflow-visible -mt-16 relative"
           >
+            {/* Doodles around the illustration */}
+            <motion.svg
+              className="absolute -top-4 -left-8 w-16 h-16 text-foreground opacity-25"
+              viewBox="0 0 40 40"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
+            >
+              <path
+                d="M20 5 L22 15 L30 12 L24 20 L32 25 L22 23 L20 33 L18 23 L8 25 L16 20 L10 12 L18 15 Z"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+            </motion.svg>
+
+            <motion.svg
+              className="absolute -top-6 right-12 w-12 h-12 text-foreground opacity-25"
+              viewBox="0 0 35 35"
+              animate={{ scale: [1, 1.1, 1] }}
+              transition={{ duration: 0.8, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <path
+                d="M17.5 30 C17.5 30 5 20 5 12 C5 7 8 5 11 5 C14 5 17.5 8 17.5 8 C17.5 8 21 5 24 5 C27 5 30 7 30 12 C30 20 17.5 30 17.5 30 Z"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+            </motion.svg>
+
+            <motion.svg
+              className="absolute -bottom-4 left-16 w-14 h-14 text-foreground opacity-25"
+              viewBox="0 0 50 50"
+              animate={{ rotate: -360 }}
+              transition={{ duration: 9, repeat: Infinity, ease: "linear" }}
+            >
+              <circle
+                cx="25"
+                cy="25"
+                r="20"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeDasharray="5,5"
+              />
+            </motion.svg>
+
+            <motion.svg
+              className="absolute -bottom-2 -right-6 w-10 h-10 text-foreground opacity-25"
+              viewBox="0 0 25 25"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+            >
+              <path d="M12.5 5 L12.5 20 M5 12.5 L20 12.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </motion.svg>
+
             <img 
               src={aboutIllustration} 
               alt="Designer at work" 
-              className="w-full h-auto"
+              className="w-full h-auto relative z-10"
             />
           </motion.div>
 
