@@ -33,7 +33,7 @@ export const About = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mb-12 overflow-hidden -mt-8"
+            className="mb-12 overflow-hidden -mt-16"
           >
             <img 
               src={aboutIllustration} 
