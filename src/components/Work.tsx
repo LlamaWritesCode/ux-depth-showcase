@@ -35,7 +35,7 @@ export const Work = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="work" className="py-32 relative overflow-hidden bg-background border-t-4 border-foreground print-grain">
+    <section id="work" className="py-32 relative overflow-hidden bg-background border-t-4 border-foreground">
       <NewspaperDoodles />
       
       {/* Newspaper texture overlay */}
