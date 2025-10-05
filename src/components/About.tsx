@@ -46,7 +46,7 @@ export const About = () => {
               className="absolute top-8 left-12 w-20 h-20 text-foreground opacity-30 z-10"
               viewBox="0 0 40 40"
               animate={{ rotate: 360 }}
-              transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
             >
               <path
                 d="M20 5 L22 15 L30 12 L24 20 L32 25 L22 23 L20 33 L18 23 L8 25 L16 20 L10 12 L18 15 Z"
@@ -60,7 +60,7 @@ export const About = () => {
               className="absolute top-4 right-16 w-16 h-16 text-foreground opacity-30 z-10"
               viewBox="0 0 35 35"
               animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 0.8, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             >
               <path
                 d="M17.5 30 C17.5 30 5 20 5 12 C5 7 8 5 11 5 C14 5 17.5 8 17.5 8 C17.5 8 21 5 24 5 C27 5 30 7 30 12 C30 20 17.5 30 17.5 30 Z"
@@ -74,7 +74,7 @@ export const About = () => {
               className="absolute bottom-8 right-12 w-14 h-14 text-foreground opacity-30 z-10"
               viewBox="0 0 25 25"
               animate={{ rotate: 360 }}
-              transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
             >
               <path d="M12.5 5 L12.5 20 M5 12.5 L20 12.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
             </motion.svg>
