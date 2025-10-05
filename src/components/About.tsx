@@ -38,11 +38,31 @@ export const About = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mb-12 -mt-16 relative"
           >
-            <img 
-              src={aboutIllustration} 
-              alt="Designer at work" 
-              className="w-full h-auto relative z-0 mix-blend-multiply opacity-80"
-            />
+            <div className="relative">
+              <img 
+                src={aboutIllustration} 
+                alt="Designer at work" 
+                className="w-full h-auto relative z-0 sepia contrast-125 brightness-90"
+                style={{
+                  filter: 'sepia(0.6) contrast(1.2) brightness(0.9) saturate(0.8)',
+                }}
+              />
+              {/* Film grain overlay */}
+              <div 
+                className="absolute inset-0 opacity-40 mix-blend-overlay pointer-events-none"
+                style={{
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2.5' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+                  backgroundRepeat: 'repeat',
+                }}
+              />
+              {/* Vignette effect */}
+              <div 
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background: 'radial-gradient(circle, transparent 50%, rgba(0,0,0,0.4) 100%)',
+                }}
+              />
+            </div>
             
             {/* Doodles overlapping the illustration */}
             <motion.svg
