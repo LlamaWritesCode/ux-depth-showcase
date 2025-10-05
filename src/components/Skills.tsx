@@ -55,7 +55,7 @@ export const Skills = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-16"
           >
-            <div className="border-4 border-foreground bg-card p-8">
+            <div className="folded-corner border-4 border-foreground bg-card p-8">
               <h3 className="text-3xl font-serif font-bold mb-6 pb-4 border-b-2 border-foreground">
                 Core Skills
               </h3>
@@ -81,7 +81,7 @@ export const Skills = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <div className="border-4 border-foreground bg-card p-8">
+            <div className="folded-corner border-4 border-foreground bg-card p-8">
               <h3 className="text-3xl font-serif font-bold mb-6 pb-4 border-b-2 border-foreground">
                 Tools of the Trade
               </h3>

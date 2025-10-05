@@ -68,7 +68,7 @@ export const Work = () => {
                 initial={{ opacity: 0, y: 40 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="border-4 border-foreground bg-card p-8 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
+                className="folded-corner border-4 border-foreground bg-card p-8 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
               >
                 {/* Project number */}
                 <div className="text-xs font-mono tracking-wider mb-4 text-muted-foreground">
