@@ -25,10 +25,35 @@ export const Hero = () => {
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           >
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8 text-balance">
-              <span className="block text-foreground/90 mb-3">Hey there</span>
-              <span className="block font-medium bg-gradient-to-r from-red-500 via-orange-500 to-rose-500 bg-clip-text text-transparent">
+              <motion.span 
+                className="block text-foreground/90 mb-3"
+                animate={{ 
+                  textShadow: [
+                    "0 0 20px rgba(239, 68, 68, 0)",
+                    "0 0 30px rgba(239, 68, 68, 0.3)",
+                    "0 0 20px rgba(239, 68, 68, 0)"
+                  ]
+                }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              >
+                Hey there
+              </motion.span>
+              <motion.span 
+                className="block font-medium bg-gradient-to-r from-red-500 via-orange-500 to-rose-500 bg-clip-text text-transparent"
+                style={{
+                  backgroundSize: "200% auto",
+                }}
+                animate={{
+                  backgroundPosition: ["0% center", "100% center", "0% center"],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "linear"
+                }}
+              >
                 I'm a Designer
-              </span>
+              </motion.span>
             </h1>
           </motion.div>
 

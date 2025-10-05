@@ -49,9 +49,9 @@ export const Background3D = () => {
         <pointLight position={[-10, -10, -5]} intensity={0.5} color="#ff6b6b" />
         
         {/* Cute floating bubbles */}
-        <AnimatedBubble position={[-2, 1, 0]} scale={1.5} color="#fbbf24" speed={0.4} />
-        <AnimatedBubble position={[3, -1, -1]} scale={1.8} color="#fb923c" speed={0.3} />
-        <AnimatedBubble position={[0, 2, -2]} scale={1.2} color="#f87171" speed={0.5} />
+        <AnimatedBubble position={[-2, 1, 0]} scale={1.5} color="#fbbf24" speed={0.8} />
+        <AnimatedBubble position={[3, -1, -1]} scale={1.8} color="#fb923c" speed={0.7} />
+        <AnimatedBubble position={[0, 2, -2]} scale={1.2} color="#f87171" speed={0.9} />
       </Canvas>
     </div>
   );
