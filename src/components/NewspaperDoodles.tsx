@@ -228,23 +228,6 @@ export const NewspaperDoodles = () => {
         <path d="M15 5 L15 25 M8 8 L22 22 M8 22 L22 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </motion.svg>
 
-      {/* Cat face */}
-      <motion.svg
-        className="absolute bottom-1/2 right-1/2"
-        width="40"
-        height="40"
-        viewBox="0 0 40 40"
-        animate={{ rotate: [0, -5, 5, 0] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <circle cx="20" cy="22" r="12" fill="none" stroke="currentColor" strokeWidth="1.5" />
-        <circle cx="15" cy="20" r="1.5" fill="currentColor" />
-        <circle cx="25" cy="20" r="1.5" fill="currentColor" />
-        <path d="M15 26 Q20 28 25 26" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-        <path d="M8 12 L12 18 L16 12" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
-        <path d="M24 12 L28 18 L32 12" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
-      </motion.svg>
-
       {/* Musical note */}
       <motion.svg
         className="absolute top-3/4 left-1/3"
