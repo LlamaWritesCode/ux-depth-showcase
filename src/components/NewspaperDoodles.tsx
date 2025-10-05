@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Send } from 'lucide-react';
 
 export const NewspaperDoodles = () => {
   return (
@@ -337,26 +338,29 @@ export const NewspaperDoodles = () => {
         <path d="M8 18 L14 25 L27 10" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
       </motion.svg>
 
-      {/* Paper Plane 1 with dotted path */}
-      <div className="absolute top-1/4 right-1/4">
-        <svg width="400" height="200" viewBox="0 0 400 200" className="absolute">
-          <path
+      {/* Paper Plane 1 with trailing path */}
+      <div className="absolute top-1/4 right-1/4 w-[400px] h-[200px]">
+        <svg width="400" height="200" viewBox="0 0 400 200" className="absolute overflow-visible">
+          <motion.path
             d="M0 100 Q100 50 200 80 Q300 110 400 60"
             stroke="currentColor"
-            strokeWidth="1"
+            strokeWidth="1.5"
             fill="none"
-            strokeDasharray="4 8"
-            opacity="0.3"
+            strokeDasharray="6 6"
+            opacity="0.4"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "linear",
+            }}
           />
         </svg>
-        <motion.svg
-          width="40"
-          height="40"
-          viewBox="0 0 40 40"
-          className="absolute"
-          animate={{
-            offsetDistance: ["0%", "100%"],
-          }}
+        <motion.div
+          className="absolute text-foreground"
+          initial={{ offsetDistance: "0%" }}
+          animate={{ offsetDistance: "100%" }}
           transition={{
             duration: 8,
             repeat: Infinity,
@@ -364,36 +368,37 @@ export const NewspaperDoodles = () => {
           }}
           style={{
             offsetPath: "path('M0 100 Q100 50 200 80 Q300 110 400 60')",
+            offsetRotate: "auto 45deg",
           }}
         >
-          <path
-            d="M5 20 L35 5 L35 35 L5 20 L35 20"
-            fill="currentColor"
-            stroke="none"
-          />
-        </motion.svg>
+          <Send size={24} className="rotate-[-45deg]" />
+        </motion.div>
       </div>
 
-      {/* Paper Plane 2 with dotted path */}
-      <div className="absolute top-1/2 left-10">
-        <svg width="350" height="180" viewBox="0 0 350 180" className="absolute">
-          <path
+      {/* Paper Plane 2 with trailing path */}
+      <div className="absolute top-1/2 left-10 w-[350px] h-[180px]">
+        <svg width="350" height="180" viewBox="0 0 350 180" className="absolute overflow-visible">
+          <motion.path
             d="M0 50 Q80 120 180 100 Q280 80 350 130"
             stroke="currentColor"
-            strokeWidth="1"
+            strokeWidth="1.5"
             fill="none"
-            strokeDasharray="4 8"
-            opacity="0.3"
+            strokeDasharray="6 6"
+            opacity="0.4"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "linear",
+              delay: 2,
+            }}
           />
         </svg>
-        <motion.svg
-          width="35"
-          height="35"
-          viewBox="0 0 40 40"
-          className="absolute"
-          animate={{
-            offsetDistance: ["0%", "100%"],
-          }}
+        <motion.div
+          className="absolute text-foreground"
+          initial={{ offsetDistance: "0%" }}
+          animate={{ offsetDistance: "100%" }}
           transition={{
             duration: 10,
             repeat: Infinity,
@@ -402,36 +407,37 @@ export const NewspaperDoodles = () => {
           }}
           style={{
             offsetPath: "path('M0 50 Q80 120 180 100 Q280 80 350 130')",
+            offsetRotate: "auto 45deg",
           }}
         >
-          <path
-            d="M5 20 L35 5 L35 35 L5 20 L35 20"
-            fill="currentColor"
-            stroke="none"
-          />
-        </motion.svg>
+          <Send size={20} className="rotate-[-45deg]" />
+        </motion.div>
       </div>
 
-      {/* Paper Plane 3 with dotted path */}
-      <div className="absolute bottom-1/4 right-10">
-        <svg width="300" height="150" viewBox="0 0 300 150" className="absolute">
-          <path
+      {/* Paper Plane 3 with trailing path */}
+      <div className="absolute bottom-1/4 right-10 w-[300px] h-[150px]">
+        <svg width="300" height="150" viewBox="0 0 300 150" className="absolute overflow-visible">
+          <motion.path
             d="M0 100 Q75 30 150 70 Q225 110 300 50"
             stroke="currentColor"
-            strokeWidth="1"
+            strokeWidth="1.5"
             fill="none"
-            strokeDasharray="4 8"
-            opacity="0.3"
+            strokeDasharray="6 6"
+            opacity="0.4"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{
+              duration: 9,
+              repeat: Infinity,
+              ease: "linear",
+              delay: 4,
+            }}
           />
         </svg>
-        <motion.svg
-          width="35"
-          height="35"
-          viewBox="0 0 40 40"
-          className="absolute"
-          animate={{
-            offsetDistance: ["0%", "100%"],
-          }}
+        <motion.div
+          className="absolute text-foreground"
+          initial={{ offsetDistance: "0%" }}
+          animate={{ offsetDistance: "100%" }}
           transition={{
             duration: 9,
             repeat: Infinity,
@@ -440,14 +446,11 @@ export const NewspaperDoodles = () => {
           }}
           style={{
             offsetPath: "path('M0 100 Q75 30 150 70 Q225 110 300 50')",
+            offsetRotate: "auto 45deg",
           }}
         >
-          <path
-            d="M5 20 L35 5 L35 35 L5 20 L35 20"
-            fill="currentColor"
-            stroke="none"
-          />
-        </motion.svg>
+          <Send size={20} className="rotate-[-45deg]" />
+        </motion.div>
       </div>
     </div>
   );
