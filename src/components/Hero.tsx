@@ -3,7 +3,7 @@ import { NewspaperDoodles } from './NewspaperDoodles';
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background tear-bottom fold-line">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
       <NewspaperDoodles />
       
       {/* Newspaper texture overlay */}
