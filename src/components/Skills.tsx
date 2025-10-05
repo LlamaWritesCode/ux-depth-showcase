@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { ScrollHexagons } from './ScrollHexagons';
+import { Background3D } from './Background3D';
 
 const skills = [
   'Visual Design',
@@ -27,6 +28,7 @@ export const Skills = () => {
 
   return (
     <section id="skills" className="py-40 relative overflow-hidden">
+      <Background3D />
       <ScrollHexagons sectionIndex={2} />
       <div className="absolute inset-0 bg-gradient-to-b from-rose-50/20 via-orange-50/20 to-red-50/20" />
       

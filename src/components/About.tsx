@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { ScrollHexagons } from './ScrollHexagons';
+import { Background3D } from './Background3D';
 
 export const About = () => {
   const ref = useRef(null);
@@ -9,6 +10,7 @@ export const About = () => {
 
   return (
     <section id="about" className="py-40 relative overflow-hidden">
+      <Background3D />
       <ScrollHexagons sectionIndex={0} />
       {/* Richer background for glass effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-orange-100/50 via-red-100/50 to-pink-100/50" />

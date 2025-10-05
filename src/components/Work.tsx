@@ -3,6 +3,7 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { ScrollHexagons } from './ScrollHexagons';
 import { ArrowUpRight } from 'lucide-react';
+import { Background3D } from './Background3D';
 
 const projects = [
   {
@@ -37,6 +38,7 @@ export const Work = () => {
 
   return (
     <section id="work" className="py-40 relative overflow-hidden">
+      <Background3D />
       <ScrollHexagons sectionIndex={1} />
       {/* Rich background */}
       <div className="absolute inset-0 bg-gradient-to-b from-pink-100/40 via-orange-100/40 to-red-100/40" />
