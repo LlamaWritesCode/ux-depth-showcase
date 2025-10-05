@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Send } from 'lucide-react';
 
 export const NewspaperDoodles = () => {
   return (
@@ -182,6 +183,84 @@ export const NewspaperDoodles = () => {
       >
         <path d="M15 3 L16 14 L15 25 L14 14 Z M3 15 L14 16 L25 15 L14 14 Z" fill="currentColor" />
       </motion.svg>
+
+      {/* Paper Plane 1 with trail */}
+      <div className="absolute top-1/4 left-0 w-full h-full">
+        <svg width="100%" height="100%" className="absolute">
+          <motion.path
+            d="M 50 100 Q 200 50 400 150"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeDasharray="4 4"
+            strokeLinecap="round"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+          />
+        </svg>
+        <motion.div
+          className="absolute"
+          initial={{ offsetDistance: "0%", rotate: 0 }}
+          animate={{ offsetDistance: "100%", rotate: 20 }}
+          transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+          style={{ offsetPath: "path('M 50 100 Q 200 50 400 150')" }}
+        >
+          <Send size={20} className="text-current" />
+        </motion.div>
+      </div>
+
+      {/* Paper Plane 2 with trail */}
+      <div className="absolute top-1/2 right-0 w-full h-full">
+        <svg width="100%" height="100%" className="absolute">
+          <motion.path
+            d="M 600 200 Q 400 100 200 250"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeDasharray="4 4"
+            strokeLinecap="round"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 5, repeat: Infinity, ease: "linear", delay: 1 }}
+          />
+        </svg>
+        <motion.div
+          className="absolute"
+          initial={{ offsetDistance: "0%", rotate: -30 }}
+          animate={{ offsetDistance: "100%", rotate: -10 }}
+          transition={{ duration: 5, repeat: Infinity, ease: "linear", delay: 1 }}
+          style={{ offsetPath: "path('M 600 200 Q 400 100 200 250')" }}
+        >
+          <Send size={20} className="text-current" />
+        </motion.div>
+      </div>
+
+      {/* Paper Plane 3 with trail */}
+      <div className="absolute bottom-1/4 left-1/4 w-full h-full">
+        <svg width="100%" height="100%" className="absolute">
+          <motion.path
+            d="M 100 300 Q 300 250 500 320"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeDasharray="4 4"
+            strokeLinecap="round"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 4.5, repeat: Infinity, ease: "linear", delay: 2 }}
+          />
+        </svg>
+        <motion.div
+          className="absolute"
+          initial={{ offsetDistance: "0%", rotate: 15 }}
+          animate={{ offsetDistance: "100%", rotate: 5 }}
+          transition={{ duration: 4.5, repeat: Infinity, ease: "linear", delay: 2 }}
+          style={{ offsetPath: "path('M 100 300 Q 300 250 500 320')" }}
+        >
+          <Send size={20} className="text-current" />
+        </motion.div>
+      </div>
     </div>
   );
 };
