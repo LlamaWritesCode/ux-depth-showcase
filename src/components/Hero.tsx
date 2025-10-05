@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Sparkles } from 'lucide-react';
 
 export const Hero = () => {
   return (
@@ -41,30 +41,107 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="relative inline-block"
           >
-            {/* Enhanced glass button */}
-            <a
-              href="#work"
-              className="group relative px-12 py-5 overflow-hidden rounded-full"
+            {/* Animated glow rings */}
+            <motion.div
+              className="absolute inset-0 rounded-full"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.5, 0, 0.5],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
               style={{
-                background: 'rgba(255, 255, 255, 0.15)',
+                background: 'radial-gradient(circle, rgba(239, 68, 68, 0.4) 0%, transparent 70%)',
+                filter: 'blur(20px)',
+              }}
+            />
+            
+            {/* Main button */}
+            <motion.a
+              href="#work"
+              className="group relative px-12 py-5 overflow-hidden rounded-full inline-flex items-center gap-3 cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              style={{
+                background: 'linear-gradient(135deg, rgba(239, 68, 68, 0.9) 0%, rgba(249, 115, 22, 0.9) 100%)',
                 backdropFilter: 'blur(20px) saturate(180%)',
                 WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-                border: '1px solid rgba(255, 255, 255, 0.3)',
-                boxShadow: '0 8px 32px 0 rgba(252, 165, 165, 0.2), inset 0 1px 1px 0 rgba(255, 255, 255, 0.3)',
+                border: '2px solid rgba(255, 255, 255, 0.4)',
+                boxShadow: '0 20px 60px -15px rgba(239, 68, 68, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
               }}
             >
-              <span className="relative z-10 text-foreground font-light text-lg">View Work</span>
-              <span className="ml-2 inline-block transition-transform duration-500 group-hover:translate-x-2">→</span>
-              {/* Shine effect */}
+              {/* Animated sparkle */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-                initial={{ x: '-100%' }}
-                whileHover={{ x: '100%' }}
-                transition={{ duration: 0.8 }}
+                animate={{
+                  rotate: [0, 180, 360],
+                  scale: [1, 1.2, 1],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <Sparkles className="w-5 h-5 text-white" />
+              </motion.div>
+              
+              <span className="relative z-10 text-white font-medium text-lg">View My Work</span>
+              
+              <motion.span 
+                className="inline-block text-white"
+                animate={{ x: [0, 5, 0] }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                →
+              </motion.span>
+              
+              {/* Animated shine effect */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent"
+                animate={{
+                  x: ['-200%', '200%'],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "linear",
+                  repeatDelay: 1,
+                }}
               />
-            </a>
+              
+              {/* Particle effects */}
+              {[...Array(6)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute w-1 h-1 bg-white rounded-full"
+                  style={{
+                    top: '50%',
+                    left: '50%',
+                  }}
+                  animate={{
+                    x: [0, (Math.cos(i * 60 * Math.PI / 180) * 80)],
+                    y: [0, (Math.sin(i * 60 * Math.PI / 180) * 80)],
+                    opacity: [0, 1, 0],
+                    scale: [0, 1.5, 0],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    delay: i * 0.2,
+                    ease: "easeOut",
+                  }}
+                />
+              ))}
+            </motion.a>
           </motion.div>
         </div>
       </div>
