@@ -19,6 +19,9 @@ export const Contact = () => {
     <section id="contact" className="py-32 relative overflow-hidden bg-background border-t-4 border-foreground">
       <NewspaperDoodles />
       
+      {/* Newspaper texture overlay */}
+      <div className="absolute inset-0 opacity-5 bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,currentColor_2px,currentColor_3px)]" />
+      
       <div className="container mx-auto px-6 relative z-10">
         <div ref={ref} className="max-w-4xl mx-auto">
           {/* Header */}
