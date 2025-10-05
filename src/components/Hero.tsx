@@ -1,17 +1,11 @@
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
-import { Hero3D } from './Hero3D';
 
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Soft salmon gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-red-50 via-orange-50 to-pink-50" />
-      
-      {/* 3D Background - very subtle */}
-      <div className="absolute inset-0 opacity-10">
-        <Hero3D />
-      </div>
 
       {/* Animated blobs - salmon tones */}
       <div className="absolute top-20 left-10 w-96 h-96 bg-red-200/20 rounded-full blur-3xl animate-blob" />
