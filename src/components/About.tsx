@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { ScrollHexagons } from './ScrollHexagons';
 
 export const About = () => {
   const ref = useRef(null);
@@ -8,6 +9,7 @@ export const About = () => {
 
   return (
     <section id="about" className="py-40 relative overflow-hidden">
+      <ScrollHexagons sectionIndex={0} />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-50/20 to-transparent" />
       
       <div className="container mx-auto px-6 relative z-10">

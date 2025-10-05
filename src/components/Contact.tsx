@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Mail, Linkedin, Twitter, Github } from 'lucide-react';
+import { ScrollHexagons } from './ScrollHexagons';
 
 export const Contact = () => {
   const ref = useRef(null);
@@ -16,6 +17,7 @@ export const Contact = () => {
 
   return (
     <section id="contact" className="py-40 relative overflow-hidden">
+      <ScrollHexagons sectionIndex={3} />
       <div className="absolute inset-0 bg-gradient-to-br from-red-50 via-orange-50 to-pink-50" />
       <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-red-200/15 rounded-full blur-3xl animate-blob" />
       <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-orange-200/15 rounded-full blur-3xl animate-blob" style={{ animationDelay: '3s' }} />

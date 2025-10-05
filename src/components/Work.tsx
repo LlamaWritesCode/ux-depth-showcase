@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { ScrollHexagons } from './ScrollHexagons';
 
 const projects = [
   {
@@ -31,6 +32,7 @@ export const Work = () => {
 
   return (
     <section id="work" className="py-40 relative overflow-hidden">
+      <ScrollHexagons sectionIndex={1} />
       <div className="absolute top-1/3 -right-32 w-[500px] h-[500px] bg-red-200/10 rounded-full blur-3xl animate-float-slow" />
       <div className="absolute bottom-1/3 -left-32 w-[500px] h-[500px] bg-orange-200/10 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: '3s' }} />
       
