@@ -336,6 +336,110 @@ export const NewspaperDoodles = () => {
       >
         <path d="M8 18 L14 25 L27 10" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
       </motion.svg>
+
+      {/* Sparkle 1 - Top area */}
+      <motion.svg
+        className="absolute"
+        style={{ top: '15vh', left: '20vw' }}
+        width="30"
+        height="30"
+        viewBox="0 0 30 30"
+        animate={{ scale: [1, 1.3, 1], rotate: [0, 180, 360], opacity: [0.6, 1, 0.6] }}
+        transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <path d="M15 3 L16 14 L15 25 L14 14 Z M3 15 L14 16 L25 15 L14 14 Z" fill="currentColor" />
+      </motion.svg>
+
+      {/* Sparkle 2 - Right side */}
+      <motion.svg
+        className="absolute"
+        style={{ top: '35vh', right: '15vw' }}
+        width="25"
+        height="25"
+        viewBox="0 0 25 25"
+        animate={{ scale: [1, 1.4, 1], rotate: [0, 90, 180], opacity: [0.5, 1, 0.5] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+      >
+        <path d="M12.5 2 L13 12 L12.5 22 L12 12 Z M2 12.5 L12 13 L22 12.5 L12 12 Z" fill="currentColor" />
+      </motion.svg>
+
+      {/* Sparkle 3 - Middle left */}
+      <motion.svg
+        className="absolute"
+        style={{ top: '50vh', left: '10vw' }}
+        width="35"
+        height="35"
+        viewBox="0 0 35 35"
+        animate={{ scale: [1, 1.2, 1], rotate: [0, 360], opacity: [0.7, 1, 0.7] }}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
+      >
+        <path d="M17.5 4 L18.5 16.5 L17.5 29 L16.5 16.5 Z M4 17.5 L16.5 18.5 L29 17.5 L16.5 16.5 Z" fill="currentColor" />
+      </motion.svg>
+
+      {/* Sparkle 4 - Bottom area */}
+      <motion.svg
+        className="absolute"
+        style={{ bottom: '25vh', right: '30vw' }}
+        width="28"
+        height="28"
+        viewBox="0 0 28 28"
+        animate={{ scale: [1, 1.35, 1], rotate: [0, 270, 360], opacity: [0.6, 1, 0.6] }}
+        transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.9 }}
+      >
+        <path d="M14 3 L14.8 13 L14 23 L13.2 13 Z M3 14 L13 14.8 L23 14 L13 13.2 Z" fill="currentColor" />
+      </motion.svg>
+
+      {/* Sparkle 5 - Upper right */}
+      <motion.svg
+        className="absolute"
+        style={{ top: '20vh', right: '25vw' }}
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        animate={{ scale: [1, 1.25, 1], rotate: [0, 180], opacity: [0.5, 1, 0.5] }}
+        transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
+      >
+        <path d="M16 3 L17 15 L16 27 L15 15 Z M3 16 L15 17 L27 16 L15 15 Z" fill="currentColor" />
+      </motion.svg>
+
+      {/* Sparkle 6 - Lower left */}
+      <motion.svg
+        className="absolute"
+        style={{ bottom: '30vh', left: '25vw' }}
+        width="26"
+        height="26"
+        viewBox="0 0 26 26"
+        animate={{ scale: [1, 1.3, 1], rotate: [0, 360], opacity: [0.6, 1, 0.6] }}
+        transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+      >
+        <path d="M13 2 L13.8 12 L13 22 L12.2 12 Z M2 13 L12 13.8 L22 13 L12 12.2 Z" fill="currentColor" />
+      </motion.svg>
+
+      {/* Sparkle 7 - Center right */}
+      <motion.svg
+        className="absolute"
+        style={{ top: '60vh', right: '20vw' }}
+        width="30"
+        height="30"
+        viewBox="0 0 30 30"
+        animate={{ scale: [1, 1.4, 1], rotate: [0, 180, 360], opacity: [0.5, 1, 0.5] }}
+        transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut", delay: 1.8 }}
+      >
+        <path d="M15 3 L16 14 L15 25 L14 14 Z M3 15 L14 16 L25 15 L14 14 Z" fill="currentColor" />
+      </motion.svg>
+
+      {/* Sparkle 8 - Top left corner */}
+      <motion.svg
+        className="absolute"
+        style={{ top: '10vh', left: '15vw' }}
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        animate={{ scale: [1, 1.35, 1], rotate: [0, 270, 360], opacity: [0.6, 1, 0.6] }}
+        transition={{ duration: 2.3, repeat: Infinity, ease: "easeInOut", delay: 2.1 }}
+      >
+        <path d="M12 2 L12.6 11 L12 20 L11.4 11 Z M2 12 L11 12.6 L20 12 L11 11.4 Z" fill="currentColor" />
+      </motion.svg>
     </div>
   );
 };
