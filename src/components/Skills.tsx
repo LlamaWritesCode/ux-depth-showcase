@@ -38,7 +38,7 @@ export const Skills = () => {
             transition={{ duration: 0.6 }}
             className="mb-16 text-center"
           >
-            <div className="inline-block border-4 border-foreground px-8 py-3 bg-foreground text-background shadow-lg">
+            <div className="inline-block border-4 border-foreground px-8 py-3 bg-foreground text-background shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer">
               <h2 className="text-5xl md:text-6xl font-serif font-bold tracking-tight">
                 Expertise & Tools
               </h2>
