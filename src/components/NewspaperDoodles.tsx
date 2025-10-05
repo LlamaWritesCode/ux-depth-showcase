@@ -337,93 +337,111 @@ export const NewspaperDoodles = () => {
         <path d="M8 18 L14 25 L27 10" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
       </motion.svg>
 
-      {/* Comic Character 1 - Smiling face with wavy hair */}
+      {/* Comic Character 1 - Classic newspaper style character with hat */}
       <motion.svg
         className="absolute top-1/2 right-1/4"
-        width="70"
-        height="80"
-        viewBox="0 0 70 80"
-        animate={{ rotate: [0, -3, 3, 0], y: [0, -5, 0] }}
-        transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-      >
-        {/* Wavy hair */}
-        <path d="M20 25 Q18 15 25 10 Q32 5 40 10 Q48 5 52 15 Q50 20 50 25" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-        {/* Face outline */}
-        <ellipse cx="35" cy="40" rx="18" ry="22" fill="none" stroke="currentColor" strokeWidth="1.5" />
-        {/* Eyes */}
-        <circle cx="28" cy="38" r="2.5" fill="currentColor" />
-        <circle cx="42" cy="38" r="2.5" fill="currentColor" />
-        {/* Happy smile */}
-        <path d="M26 48 Q35 54 44 48" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-        {/* Rosy cheeks */}
-        <circle cx="22" cy="45" r="3" fill="currentColor" opacity="0.3" />
-        <circle cx="48" cy="45" r="3" fill="currentColor" opacity="0.3" />
-      </motion.svg>
-
-      {/* Comic Character 2 - Winking character with spiky hair */}
-      <motion.svg
-        className="absolute top-1/4 left-1/2"
-        width="65"
-        height="75"
-        viewBox="0 0 65 75"
-        animate={{ rotate: [0, 5, -5, 0], scale: [1, 1.05, 1] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-      >
-        {/* Spiky hair */}
-        <path d="M15 28 L18 18 L22 28 L26 16 L30 28 L34 14 L38 28 L42 18 L45 28" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-        {/* Face */}
-        <circle cx="30" cy="42" r="16" fill="none" stroke="currentColor" strokeWidth="1.5" />
-        {/* Winking eye */}
-        <path d="M22 38 Q25 40 28 38" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-        {/* Open eye */}
-        <circle cx="38" cy="38" r="2" fill="currentColor" />
-        {/* Big grin */}
-        <path d="M20 48 Q30 56 40 48" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-        {/* Tongue sticking out */}
-        <ellipse cx="30" cy="53" rx="4" ry="3" fill="currentColor" opacity="0.5" />
-      </motion.svg>
-
-      {/* Comic Character 3 - Cool character with sunglasses */}
-      <motion.svg
-        className="absolute bottom-1/4 right-10"
-        width="60"
-        height="70"
-        viewBox="0 0 60 70"
-        animate={{ x: [0, 5, 0], rotate: [0, -2, 2, 0] }}
+        width="80"
+        height="100"
+        viewBox="0 0 80 100"
+        animate={{ rotate: [0, -2, 2, 0] }}
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
       >
         {/* Head */}
-        <circle cx="30" cy="35" r="15" fill="none" stroke="currentColor" strokeWidth="1.5" />
-        {/* Cool hair swoosh */}
-        <path d="M18 22 Q20 15 28 18 Q35 20 38 18" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-        {/* Sunglasses */}
-        <rect x="20" y="30" width="8" height="6" rx="2" fill="currentColor" opacity="0.7" />
-        <rect x="32" y="30" width="8" height="6" rx="2" fill="currentColor" opacity="0.7" />
-        <path d="M28 33 L32 33" stroke="currentColor" strokeWidth="1" />
-        {/* Cool smirk */}
-        <path d="M23 43 Q28 46 33 43" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+        <ellipse cx="40" cy="50" rx="20" ry="24" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="2" />
+        {/* Hat */}
+        <ellipse cx="40" cy="28" rx="24" ry="6" fill="currentColor" opacity="0.2" stroke="currentColor" strokeWidth="2" />
+        <rect x="30" y="20" width="20" height="15" fill="currentColor" opacity="0.2" stroke="currentColor" strokeWidth="2" />
+        {/* Eyes */}
+        <ellipse cx="32" cy="48" rx="4" ry="6" fill="currentColor" />
+        <ellipse cx="48" cy="48" rx="4" ry="6" fill="currentColor" />
+        <circle cx="33" cy="47" r="1.5" fill="white" />
+        <circle cx="49" cy="47" r="1.5" fill="white" />
+        {/* Nose */}
+        <path d="M40 52 L38 58 L42 58 Z" fill="currentColor" opacity="0.3" />
+        {/* Mouth */}
+        <path d="M32 64 Q40 70 48 64" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" />
       </motion.svg>
 
-      {/* Comic Character 4 - Surprised character */}
+      {/* Comic Character 2 - Newspaper detective style */}
+      <motion.svg
+        className="absolute top-1/4 left-1/2"
+        width="75"
+        height="95"
+        viewBox="0 0 75 95"
+        animate={{ y: [0, -5, 0] }}
+        transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+      >
+        {/* Head */}
+        <circle cx="37" cy="48" r="18" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="2" />
+        {/* Detective hat */}
+        <path d="M20 35 L54 35 L50 28 L24 28 Z" fill="currentColor" opacity="0.25" stroke="currentColor" strokeWidth="2" />
+        <rect x="30" y="25" width="14" height="5" fill="currentColor" opacity="0.2" stroke="currentColor" strokeWidth="1.5" />
+        {/* Pipe */}
+        <path d="M48 58 L60 58 Q64 58 64 62 Q64 66 60 66 L48 66" fill="currentColor" opacity="0.2" stroke="currentColor" strokeWidth="2" />
+        <rect x="44" y="56" width="6" height="12" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="2" />
+        {/* Eyes with glasses */}
+        <circle cx="30" cy="46" r="6" fill="none" stroke="currentColor" strokeWidth="2" />
+        <circle cx="44" cy="46" r="6" fill="none" stroke="currentColor" strokeWidth="2" />
+        <circle cx="30" cy="46" r="2" fill="currentColor" />
+        <circle cx="44" cy="46" r="2" fill="currentColor" />
+        <path d="M36 46 L38 46" stroke="currentColor" strokeWidth="2" />
+        {/* Mustache */}
+        <path d="M28 54 Q32 56 37 54 Q42 56 46 54" fill="currentColor" stroke="currentColor" strokeWidth="1.5" />
+      </motion.svg>
+
+      {/* Comic Character 3 - Classic office worker */}
+      <motion.svg
+        className="absolute bottom-1/4 right-10"
+        width="70"
+        height="90"
+        viewBox="0 0 70 90"
+        animate={{ scale: [1, 1.05, 1] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+      >
+        {/* Head */}
+        <ellipse cx="35" cy="42" rx="16" ry="20" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="2" />
+        {/* Hair */}
+        <path d="M20 30 Q25 22 35 24 Q45 22 50 30" fill="currentColor" opacity="0.25" stroke="currentColor" strokeWidth="2" />
+        {/* Glasses */}
+        <rect x="24" y="38" width="9" height="8" rx="2" fill="none" stroke="currentColor" strokeWidth="2" />
+        <rect x="37" y="38" width="9" height="8" rx="2" fill="none" stroke="currentColor" strokeWidth="2" />
+        <path d="M33 42 L37 42" stroke="currentColor" strokeWidth="2" />
+        {/* Eyes behind glasses */}
+        <circle cx="28" cy="42" r="1.5" fill="currentColor" />
+        <circle cx="41" cy="42" r="1.5" fill="currentColor" />
+        {/* Smile */}
+        <path d="M26 52 Q35 56 44 52" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" />
+        {/* Collar/Tie */}
+        <path d="M30 62 L35 75 L40 62" fill="currentColor" opacity="0.2" stroke="currentColor" strokeWidth="2" />
+      </motion.svg>
+
+      {/* Comic Character 4 - Excited character with speech bubble */}
       <motion.svg
         className="absolute bottom-1/3 left-1/4"
-        width="65"
-        height="75"
-        viewBox="0 0 65 75"
-        animate={{ y: [0, -8, 0], scale: [1, 1.08, 1] }}
-        transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        width="90"
+        height="90"
+        viewBox="0 0 90 90"
+        animate={{ rotate: [0, 3, -3, 0] }}
+        transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
       >
-        {/* Messy hair */}
-        <path d="M18 25 Q15 18 20 15 M25 24 Q25 14 30 12 M35 24 Q38 15 42 14 M45 26 Q48 20 48 16" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-        {/* Face */}
-        <ellipse cx="32" cy="40" rx="17" ry="20" fill="none" stroke="currentColor" strokeWidth="1.5" />
-        {/* Wide surprised eyes */}
-        <circle cx="25" cy="37" r="3.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
-        <circle cx="39" cy="37" r="3.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
-        <circle cx="25" cy="37" r="1.5" fill="currentColor" />
-        <circle cx="39" cy="37" r="1.5" fill="currentColor" />
-        {/* Surprised mouth */}
-        <ellipse cx="32" cy="48" rx="4" ry="6" fill="none" stroke="currentColor" strokeWidth="1.5" />
+        {/* Head */}
+        <circle cx="35" cy="45" r="17" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="2" />
+        {/* Hair tuft */}
+        <path d="M30 28 Q32 22 35 28 Q38 23 40 28" fill="currentColor" opacity="0.25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        {/* Excited eyes */}
+        <circle cx="28" cy="42" r="3" fill="currentColor" />
+        <circle cx="42" cy="42" r="3" fill="currentColor" />
+        <circle cx="29" cy="41" r="1" fill="white" />
+        <circle cx="43" cy="41" r="1" fill="white" />
+        {/* Big smile */}
+        <path d="M24 50 Q35 58 46 50" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+        <path d="M28 52 Q35 56 42 52" fill="currentColor" opacity="0.15" />
+        {/* Speech bubble */}
+        <rect x="52" y="25" width="32" height="20" rx="4" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="2" />
+        <path d="M52 38 L48 42 L52 45" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+        {/* Exclamation in bubble */}
+        <path d="M68 30 L68 38" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+        <circle cx="68" cy="42" r="1.5" fill="currentColor" />
       </motion.svg>
     </div>
   );
