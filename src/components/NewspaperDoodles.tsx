@@ -337,111 +337,143 @@ export const NewspaperDoodles = () => {
         <path d="M8 18 L14 25 L27 10" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
       </motion.svg>
 
-      {/* Comic Character 1 - Classic newspaper style character with hat */}
+      {/* Comic Strip 1 - Three panel comic strip */}
       <motion.svg
-        className="absolute top-1/2 right-1/4"
-        width="80"
-        height="100"
-        viewBox="0 0 80 100"
-        animate={{ rotate: [0, -2, 2, 0] }}
+        className="absolute top-1/4 left-10"
+        width="240"
+        height="90"
+        viewBox="0 0 240 90"
+        animate={{ opacity: [0.8, 1, 0.8] }}
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
       >
-        {/* Head */}
-        <ellipse cx="40" cy="50" rx="20" ry="24" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="2" />
-        {/* Hat */}
-        <ellipse cx="40" cy="28" rx="24" ry="6" fill="currentColor" opacity="0.2" stroke="currentColor" strokeWidth="2" />
-        <rect x="30" y="20" width="20" height="15" fill="currentColor" opacity="0.2" stroke="currentColor" strokeWidth="2" />
-        {/* Eyes */}
-        <ellipse cx="32" cy="48" rx="4" ry="6" fill="currentColor" />
-        <ellipse cx="48" cy="48" rx="4" ry="6" fill="currentColor" />
-        <circle cx="33" cy="47" r="1.5" fill="white" />
-        <circle cx="49" cy="47" r="1.5" fill="white" />
-        {/* Nose */}
-        <path d="M40 52 L38 58 L42 58 Z" fill="currentColor" opacity="0.3" />
-        {/* Mouth */}
-        <path d="M32 64 Q40 70 48 64" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+        {/* Comic title */}
+        <text x="10" y="12" fontSize="8" fontWeight="bold" fill="currentColor">THE DAILY ADVENTURES</text>
+        
+        {/* Panel 1 */}
+        <rect x="5" y="18" width="70" height="65" fill="currentColor" opacity="0.05" stroke="currentColor" strokeWidth="2" />
+        <circle cx="40" cy="45" r="12" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="35" cy="43" r="2" fill="currentColor" />
+        <circle cx="45" cy="43" r="2" fill="currentColor" />
+        <path d="M35 50 Q40 54 45 50" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        <path d="M15 70 Q25 65 35 70" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        
+        {/* Panel 2 */}
+        <rect x="85" y="18" width="70" height="65" fill="currentColor" opacity="0.05" stroke="currentColor" strokeWidth="2" />
+        <circle cx="120" cy="45" r="12" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="115" cy="43" r="2" fill="currentColor" />
+        <circle cx="125" cy="43" r="2" fill="currentColor" />
+        <path d="M113 50 Q120 47 127 50" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        <ellipse cx="105" y="35" rx="15" ry="8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 2" />
+        
+        {/* Panel 3 */}
+        <rect x="165" y="18" width="70" height="65" fill="currentColor" opacity="0.05" stroke="currentColor" strokeWidth="2" />
+        <circle cx="200" cy="45" r="12" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="195" cy="43" r="2" fill="currentColor" />
+        <circle cx="205" cy="43" r="2" fill="currentColor" />
+        <path d="M195 50 Q200 55 205 50" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        <text x="185" y="75" fontSize="6" fill="currentColor">HA HA!</text>
       </motion.svg>
 
-      {/* Comic Character 2 - Newspaper detective style */}
+      {/* Comic Strip 2 - Single panel comic */}
       <motion.svg
-        className="absolute top-1/4 left-1/2"
-        width="75"
-        height="95"
-        viewBox="0 0 75 95"
-        animate={{ y: [0, -5, 0] }}
+        className="absolute bottom-1/4 right-20"
+        width="160"
+        height="120"
+        viewBox="0 0 160 120"
+        animate={{ scale: [1, 1.02, 1] }}
         transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
       >
-        {/* Head */}
-        <circle cx="37" cy="48" r="18" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="2" />
-        {/* Detective hat */}
-        <path d="M20 35 L54 35 L50 28 L24 28 Z" fill="currentColor" opacity="0.25" stroke="currentColor" strokeWidth="2" />
-        <rect x="30" y="25" width="14" height="5" fill="currentColor" opacity="0.2" stroke="currentColor" strokeWidth="1.5" />
-        {/* Pipe */}
-        <path d="M48 58 L60 58 Q64 58 64 62 Q64 66 60 66 L48 66" fill="currentColor" opacity="0.2" stroke="currentColor" strokeWidth="2" />
-        <rect x="44" y="56" width="6" height="12" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="2" />
-        {/* Eyes with glasses */}
-        <circle cx="30" cy="46" r="6" fill="none" stroke="currentColor" strokeWidth="2" />
-        <circle cx="44" cy="46" r="6" fill="none" stroke="currentColor" strokeWidth="2" />
-        <circle cx="30" cy="46" r="2" fill="currentColor" />
-        <circle cx="44" cy="46" r="2" fill="currentColor" />
-        <path d="M36 46 L38 46" stroke="currentColor" strokeWidth="2" />
-        {/* Mustache */}
-        <path d="M28 54 Q32 56 37 54 Q42 56 46 54" fill="currentColor" stroke="currentColor" strokeWidth="1.5" />
-      </motion.svg>
-
-      {/* Comic Character 3 - Classic office worker */}
-      <motion.svg
-        className="absolute bottom-1/4 right-10"
-        width="70"
-        height="90"
-        viewBox="0 0 70 90"
-        animate={{ scale: [1, 1.05, 1] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-      >
-        {/* Head */}
-        <ellipse cx="35" cy="42" rx="16" ry="20" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="2" />
-        {/* Hair */}
-        <path d="M20 30 Q25 22 35 24 Q45 22 50 30" fill="currentColor" opacity="0.25" stroke="currentColor" strokeWidth="2" />
-        {/* Glasses */}
-        <rect x="24" y="38" width="9" height="8" rx="2" fill="none" stroke="currentColor" strokeWidth="2" />
-        <rect x="37" y="38" width="9" height="8" rx="2" fill="none" stroke="currentColor" strokeWidth="2" />
-        <path d="M33 42 L37 42" stroke="currentColor" strokeWidth="2" />
-        {/* Eyes behind glasses */}
-        <circle cx="28" cy="42" r="1.5" fill="currentColor" />
-        <circle cx="41" cy="42" r="1.5" fill="currentColor" />
-        {/* Smile */}
-        <path d="M26 52 Q35 56 44 52" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" />
-        {/* Collar/Tie */}
-        <path d="M30 62 L35 75 L40 62" fill="currentColor" opacity="0.2" stroke="currentColor" strokeWidth="2" />
-      </motion.svg>
-
-      {/* Comic Character 4 - Excited character with speech bubble */}
-      <motion.svg
-        className="absolute bottom-1/3 left-1/4"
-        width="90"
-        height="90"
-        viewBox="0 0 90 90"
-        animate={{ rotate: [0, 3, -3, 0] }}
-        transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-      >
-        {/* Head */}
-        <circle cx="35" cy="45" r="17" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="2" />
-        {/* Hair tuft */}
-        <path d="M30 28 Q32 22 35 28 Q38 23 40 28" fill="currentColor" opacity="0.25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        {/* Excited eyes */}
-        <circle cx="28" cy="42" r="3" fill="currentColor" />
-        <circle cx="42" cy="42" r="3" fill="currentColor" />
-        <circle cx="29" cy="41" r="1" fill="white" />
-        <circle cx="43" cy="41" r="1" fill="white" />
-        {/* Big smile */}
-        <path d="M24 50 Q35 58 46 50" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-        <path d="M28 52 Q35 56 42 52" fill="currentColor" opacity="0.15" />
+        <text x="10" y="12" fontSize="9" fontWeight="bold" fill="currentColor">OFFICE LIFE</text>
+        <rect x="8" y="18" width="144" height="95" fill="currentColor" opacity="0.05" stroke="currentColor" strokeWidth="2.5" />
+        
+        {/* Desk */}
+        <rect x="30" y="75" width="100" height="25" fill="currentColor" opacity="0.1" stroke="currentColor" strokeWidth="1.5" />
+        
+        {/* Character at desk */}
+        <circle cx="80" cy="55" r="14" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="1.5" />
+        <rect x="70" y="65" width="20" height="15" fill="currentColor" opacity="0.12" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="75" cy="52" r="2" fill="currentColor" />
+        <circle cx="85" cy="52" r="2" fill="currentColor" />
+        <path d="M74 58 Q80 56 86 58" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        
         {/* Speech bubble */}
-        <rect x="52" y="25" width="32" height="20" rx="4" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="2" />
-        <path d="M52 38 L48 42 L52 45" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-        {/* Exclamation in bubble */}
-        <path d="M68 30 L68 38" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-        <circle cx="68" cy="42" r="1.5" fill="currentColor" />
+        <ellipse cx="115" cy="40" rx="28" ry="18" fill="currentColor" opacity="0.08" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M95 48 L90 52 L98 50" fill="currentColor" opacity="0.08" stroke="currentColor" strokeWidth="1.5" />
+        <text x="95" y="42" fontSize="6" fill="currentColor">IS IT</text>
+        <text x="92" y="48" fontSize="6" fill="currentColor">FRIDAY?</text>
+      </motion.svg>
+
+      {/* Comic Strip 3 - Vertical Sunday comic style */}
+      <motion.svg
+        className="absolute top-1/3 right-1/3"
+        width="130"
+        height="180"
+        viewBox="0 0 130 180"
+        animate={{ y: [0, -3, 0] }}
+        transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <text x="15" y="14" fontSize="10" fontWeight="bold" fill="currentColor">SUNDAY FUNNIES</text>
+        
+        {/* Top panel */}
+        <rect x="10" y="22" width="110" height="50" fill="currentColor" opacity="0.05" stroke="currentColor" strokeWidth="2" />
+        <circle cx="35" cy="47" r="10" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="30" cy="45" r="1.5" fill="currentColor" />
+        <circle cx="40" cy="45" r="1.5" fill="currentColor" />
+        <path d="M30 52 Q35 55 40 52" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        <circle cx="80" cy="47" r="10" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="75" cy="45" r="1.5" fill="currentColor" />
+        <circle cx="85" cy="45" r="1.5" fill="currentColor" />
+        <path d="M75 52 Q80 55 85 52" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        
+        {/* Middle panel */}
+        <rect x="10" y="78" width="110" height="45" fill="currentColor" opacity="0.05" stroke="currentColor" strokeWidth="2" />
+        <ellipse cx="65" cy="95" rx="25" ry="15" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 2" />
+        <text x="48" y="99" fontSize="7" fill="currentColor">ZZZ</text>
+        
+        {/* Bottom panel */}
+        <rect x="10" y="129" width="110" height="45" fill="currentColor" opacity="0.05" stroke="currentColor" strokeWidth="2" />
+        <circle cx="65" cy="151" r="10" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="60" cy="149" r="2" fill="currentColor" />
+        <circle cx="70" cy="149" r="2" fill="currentColor" />
+        <circle cx="61" cy="148" r="0.8" fill="white" />
+        <circle cx="71" cy="148" r="0.8" fill="white" />
+        <path d="M60 156 Q65 160 70 156" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        <text x="85" y="155" fontSize="5" fill="currentColor">!</text>
+      </motion.svg>
+
+      {/* Comic Strip 4 - Horizontal daily strip */}
+      <motion.svg
+        className="absolute bottom-20 left-1/4"
+        width="220"
+        height="80"
+        viewBox="0 0 220 80"
+        animate={{ opacity: [0.9, 1, 0.9] }}
+        transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <text x="8" y="12" fontSize="7" fontWeight="bold" fill="currentColor">PETE & REPEAT</text>
+        
+        {/* Panel 1 */}
+        <rect x="5" y="18" width="65" height="58" fill="currentColor" opacity="0.05" stroke="currentColor" strokeWidth="2" />
+        <circle cx="37" cy="45" r="11" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M32 43 L35 43 M39 43 L42 43" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M32 52 Q37 49 42 52" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        <ellipse cx="25" cy="30" rx="18" ry="10" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 1" />
+        <text x="15" y="33" fontSize="5" fill="currentColor">HMM...</text>
+        
+        {/* Panel 2 */}
+        <rect x="78" y="18" width="65" height="58" fill="currentColor" opacity="0.05" stroke="currentColor" strokeWidth="2" />
+        <circle cx="110" cy="45" r="11" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="105" cy="43" r="2" fill="currentColor" />
+        <circle cx="115" cy="43" r="2" fill="currentColor" />
+        <ellipse cx="110" cy="52" rx="4" ry="5" fill="currentColor" opacity="0.2" />
+        
+        {/* Panel 3 */}
+        <rect x="151" y="18" width="65" height="58" fill="currentColor" opacity="0.05" stroke="currentColor" strokeWidth="2" />
+        <circle cx="183" cy="45" r="11" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M178 43 Q180 45 182 43" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        <circle cx="188" cy="43" r="2" fill="currentColor" />
+        <path d="M178 52 Q183 56 188 52" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        <path d="M168 60 L173 65 L178 60" stroke="currentColor" strokeWidth="1.5" fill="none" />
       </motion.svg>
     </div>
   );
