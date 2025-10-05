@@ -28,7 +28,7 @@ export const Contact = () => {
             transition={{ duration: 0.6 }}
             className="mb-16 text-center"
           >
-            <div className="inline-block border-4 border-foreground px-8 py-3 bg-foreground text-background mb-8">
+            <div className="inline-block border-4 border-foreground px-8 py-3 bg-foreground text-background mb-8 shadow-lg">
               <h2 className="text-5xl md:text-6xl font-serif font-bold tracking-tight">
                 Let's Connect
               </h2>
