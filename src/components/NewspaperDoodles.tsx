@@ -24,23 +24,22 @@ export const NewspaperDoodles = () => {
         />
       </motion.svg>
 
-      {/* Arrow */}
+      {/* Cute flower */}
       <motion.svg
         className="absolute top-40 right-20"
-        width="60"
-        height="60"
-        viewBox="0 0 60 60"
-        animate={{ y: [0, -10, 0] }}
-        transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
+        width="50"
+        height="50"
+        viewBox="0 0 50 50"
+        animate={{ rotate: [0, 10, -10, 0] }}
+        transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
       >
-        <path
-          d="M10 30 Q30 10 50 30"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-        />
-        <path d="M50 30 L45 25 M50 30 L45 35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        {/* Petals */}
+        <circle cx="25" cy="15" r="6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="35" cy="25" r="6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="25" cy="35" r="6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="15" cy="25" r="6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        {/* Center */}
+        <circle cx="25" cy="25" r="5" fill="currentColor" />
       </motion.svg>
 
       {/* Scribble circle */}
