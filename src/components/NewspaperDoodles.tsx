@@ -76,7 +76,7 @@ export const NewspaperDoodles = () => {
           d="M5 15 Q15 5 25 15 Q35 25 45 15 Q55 5 65 15 Q75 25 80 15"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1"
+          strokeWidth="1.5"
           strokeLinecap="round"
         />
       </motion.svg>
@@ -94,7 +94,7 @@ export const NewspaperDoodles = () => {
           d="M17.5 30 C17.5 30 5 20 5 12 C5 7 8 5 11 5 C14 5 17.5 8 17.5 8 C17.5 8 21 5 24 5 C27 5 30 7 30 12 C30 20 17.5 30 17.5 30 Z"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1"
+          strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
@@ -113,7 +113,7 @@ export const NewspaperDoodles = () => {
           d="M15 5 L10 20 L18 20 L12 40 L20 18 L14 18 Z"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1"
+          strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
@@ -132,7 +132,7 @@ export const NewspaperDoodles = () => {
           d="M5 10 Q20 5 40 10 Q60 15 80 10 Q90 5 95 10"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1"
+          strokeWidth="1.5"
           strokeLinecap="round"
         />
       </motion.svg>
@@ -154,9 +154,9 @@ export const NewspaperDoodles = () => {
           rx="5"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1"
+          strokeWidth="1.5"
         />
-        <path d="M15 35 L20 45 L25 35" fill="none" stroke="currentColor" strokeWidth="1" />
+        <path d="M15 35 L20 45 L25 35" fill="none" stroke="currentColor" strokeWidth="1.5" />
       </motion.svg>
 
       {/* Plus signs */}
@@ -168,7 +168,7 @@ export const NewspaperDoodles = () => {
         animate={{ rotate: 360 }}
         transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
       >
-        <path d="M12.5 5 L12.5 20 M5 12.5 L20 12.5" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
+        <path d="M12.5 5 L12.5 20 M5 12.5 L20 12.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </motion.svg>
 
       {/* Sparkles */}
