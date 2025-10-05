@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { NewspaperDoodles } from './NewspaperDoodles';
+import aboutIllustration from '@/assets/about-illustration.jpg';
 
 export const About = () => {
   const ref = useRef(null);
@@ -25,6 +26,20 @@ export const About = () => {
                 About the Designer
               </h2>
             </div>
+          </motion.div>
+
+          {/* Illustration */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mb-12 border-4 border-foreground overflow-hidden shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+          >
+            <img 
+              src={aboutIllustration} 
+              alt="Designer at work" 
+              className="w-full h-auto"
+            />
           </motion.div>
 
           {/* Article-style content */}
