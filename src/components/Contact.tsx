@@ -2,8 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Mail, Linkedin, Twitter, Github } from 'lucide-react';
-import { ScrollHexagons } from './ScrollHexagons';
-import { Background3D } from './Background3D';
+import { NewspaperDoodles } from './NewspaperDoodles';
 
 export const Contact = () => {
   const ref = useRef(null);
@@ -17,82 +16,111 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-40 relative overflow-hidden">
-      <Background3D />
-      <ScrollHexagons sectionIndex={3} />
-      <div className="absolute inset-0 bg-gradient-to-br from-red-50 via-orange-50 to-pink-50" />
-      <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-red-200/15 rounded-full blur-3xl animate-blob" />
-      <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-orange-200/15 rounded-full blur-3xl animate-blob" style={{ animationDelay: '3s' }} />
+    <section id="contact" className="py-32 relative overflow-hidden bg-background border-t-4 border-foreground">
+      <NewspaperDoodles />
       
       <div className="container mx-auto px-6 relative z-10">
-        <div ref={ref} className="max-w-3xl mx-auto">
+        <div ref={ref} className="max-w-4xl mx-auto">
+          {/* Header */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-center mb-20"
+            transition={{ duration: 0.6 }}
+            className="mb-16 text-center"
           >
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-light mb-8 text-foreground/90">
-              Let's Connect
-            </h2>
-            <div className="w-16 h-0.5 bg-gradient-to-r from-red-300 to-orange-300 mx-auto rounded-full mb-12" />
-            <p className="text-xl text-muted-foreground/70 max-w-xl mx-auto leading-relaxed font-light">
-              I'd love to hear about your project
+            <div className="inline-block border-4 border-foreground px-8 py-3 bg-foreground text-background mb-8">
+              <h2 className="text-5xl md:text-6xl font-serif font-bold tracking-tight">
+                Let's Connect
+              </h2>
+            </div>
+            <p className="text-xl md:text-2xl font-serif">
+              Have a project in mind? Let's create something amazing together.
             </p>
           </motion.div>
 
+          {/* Contact card */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="text-center mb-16"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="border-4 border-foreground bg-card p-12 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] mb-12"
           >
-            <motion.a
-              href="mailto:hello@designer.com"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              className="group relative inline-block px-12 py-5 bg-white/30 backdrop-blur-xl border border-white/20 text-foreground rounded-full font-light text-xl transition-all duration-700 hover:bg-white/40 hover:shadow-2xl overflow-hidden"
-            >
-              <span className="relative z-10">Get in Touch</span>
-              {/* Shine effect */}
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-                initial={{ x: '-100%' }}
-                whileHover={{ x: '100%' }}
-                transition={{ duration: 0.8 }}
-              />
-            </motion.a>
+            {/* Email CTA */}
+            <div className="text-center mb-12">
+              <motion.a
+                href="mailto:hello@designer.com"
+                className="inline-block border-4 border-foreground px-12 py-4 font-serif font-bold text-2xl bg-foreground text-background hover:bg-background hover:text-foreground transition-all duration-300 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Get in Touch →
+              </motion.a>
+            </div>
+
+            {/* Divider */}
+            <div className="border-t-2 border-foreground my-8" />
+
+            {/* Social links */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {socials.map((social, index) => (
+                <motion.a
+                  key={index}
+                  href={social.href}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                  className="border-2 border-foreground p-6 flex flex-col items-center justify-center gap-3 hover:bg-foreground hover:text-background transition-all duration-300 group"
+                  whileHover={{ y: -4 }}
+                  aria-label={social.label}
+                >
+                  <social.icon className="w-8 h-8" />
+                  <span className="font-mono text-sm uppercase tracking-wider">
+                    {social.label}
+                  </span>
+                </motion.a>
+              ))}
+            </div>
           </motion.div>
 
+          {/* Newsletter signup - newspaper style */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="flex justify-center gap-4"
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="border-4 border-foreground bg-foreground text-background p-8"
           >
-            {socials.map((social, index) => (
-              <motion.a
-                key={index}
-                href={social.href}
-                whileHover={{ scale: 1.1, y: -4 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-14 h-14 rounded-2xl bg-white/40 backdrop-blur-xl border border-white/20 flex items-center justify-center text-muted-foreground/60 hover:bg-white/50 hover:border-white/30 transition-all duration-500 shadow-lg hover:shadow-xl"
-                aria-label={social.label}
-              >
-                <social.icon className="w-5 h-5" />
-              </motion.a>
-            ))}
+            <div className="text-center">
+              <h3 className="text-2xl font-serif font-bold mb-4">
+                Subscribe to Updates
+              </h3>
+              <p className="font-serif mb-6">
+                Get the latest design insights and project updates delivered to your inbox.
+              </p>
+              <div className="flex gap-2 max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="your.email@example.com"
+                  className="flex-1 border-2 border-background px-4 py-2 font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-background"
+                />
+                <button className="border-2 border-background bg-background text-foreground px-6 py-2 font-serif font-bold hover:bg-transparent hover:text-background transition-all duration-300">
+                  Subscribe
+                </button>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
 
+      {/* Footer */}
       <motion.footer
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
-        transition={{ duration: 1, delay: 0.9 }}
-        className="mt-32 pt-8 text-center text-muted-foreground/50 text-sm font-light relative z-10"
+        transition={{ duration: 0.6, delay: 0.8 }}
+        className="mt-20 pt-8 border-t-2 border-foreground text-center relative z-10"
       >
-        <p>© 2024 Designer Portfolio</p>
+        <p className="font-mono text-sm uppercase tracking-widest">
+          © {new Date().getFullYear()} Designer Portfolio • All Rights Reserved
+        </p>
       </motion.footer>
     </section>
   );

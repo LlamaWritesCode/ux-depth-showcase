@@ -1,34 +1,32 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { ScrollHexagons } from './ScrollHexagons';
-import { ArrowUpRight } from 'lucide-react';
-import { Background3D } from './Background3D';
+import { NewspaperDoodles } from './NewspaperDoodles';
 
 const projects = [
   {
     title: 'E-Commerce Platform',
     category: 'UX/UI Design',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop',
-    span: 'col-span-2',
+    description: 'Complete redesign of shopping experience',
+    year: '2024',
   },
   {
     title: 'Mobile Banking App',
     category: 'Product Design',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop',
-    span: 'col-span-1',
+    description: 'Secure and intuitive financial management',
+    year: '2023',
   },
   {
     title: 'Healthcare Dashboard',
     category: 'UX Research & Design',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop',
-    span: 'col-span-1',
+    description: 'Patient data visualization and analytics',
+    year: '2023',
   },
   {
     title: 'SaaS Platform',
     category: 'UI/UX Design',
-    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&auto=format&fit=crop',
-    span: 'col-span-2',
+    description: 'Enterprise collaboration tool',
+    year: '2024',
   },
 ];
 
@@ -37,97 +35,82 @@ export const Work = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="work" className="py-40 relative overflow-hidden">
-      <Background3D />
-      <ScrollHexagons sectionIndex={1} />
-      {/* Rich background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-pink-100/40 via-orange-100/40 to-red-100/40" />
+    <section id="work" className="py-32 relative overflow-hidden bg-background border-t-4 border-foreground">
+      <NewspaperDoodles />
       
       <div className="container mx-auto px-6 relative z-10">
         <div ref={ref}>
+          {/* Section header */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-center mb-24"
+            transition={{ duration: 0.6 }}
+            className="mb-16 text-center"
           >
-            <h2 className="text-5xl md:text-6xl font-light mb-8 text-foreground/90">
-              Selected Work
-            </h2>
-            <div className="w-16 h-0.5 bg-gradient-to-r from-red-400 to-orange-400 mx-auto rounded-full" />
+            <div className="inline-block border-4 border-foreground px-8 py-3 bg-foreground text-background">
+              <h2 className="text-5xl md:text-6xl font-serif font-bold tracking-tight">
+                Featured Work
+              </h2>
+            </div>
+            <div className="mt-6 text-sm uppercase tracking-widest font-mono text-muted-foreground">
+              Selected Projects & Case Studies
+            </div>
           </motion.div>
 
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Project listings - newspaper classified style */}
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
-              <motion.div
+              <motion.article
                 key={index}
-                initial={{ opacity: 0, y: 60 }}
+                initial={{ opacity: 0, y: 40 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 1, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
-                className={`group relative ${project.span}`}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="border-4 border-foreground bg-card p-8 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
               >
-                {/* Glow effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-red-400/60 to-orange-400/60 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition duration-1000" />
+                {/* Project number */}
+                <div className="text-xs font-mono tracking-wider mb-4 text-muted-foreground">
+                  PROJECT #{(index + 1).toString().padStart(2, '0')}
+                </div>
                 
-                <motion.div
-                  whileHover={{ y: -8 }}
-                  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                  className="relative overflow-hidden rounded-3xl h-full shadow-2xl"
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.2)',
-                    backdropFilter: 'blur(30px) saturate(180%)',
-                    WebkitBackdropFilter: 'blur(30px) saturate(180%)',
-                    border: '1px solid rgba(255, 255, 255, 0.3)',
-                    boxShadow: '0 8px 32px 0 rgba(252, 165, 165, 0.15)',
-                  }}
-                >
-                  {/* Image container */}
-                  <div className="aspect-[4/3] overflow-hidden relative">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110"
-                    />
-                    {/* Gradient overlay on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                    
-                    {/* Floating glass button */}
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                      whileHover={{ scale: 1.1 }}
-                      className="absolute top-6 right-6 w-14 h-14 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500"
-                      style={{
-                        background: 'rgba(255, 255, 255, 0.25)',
-                        backdropFilter: 'blur(20px)',
-                        WebkitBackdropFilter: 'blur(20px)',
-                        border: '1px solid rgba(255, 255, 255, 0.3)',
-                        boxShadow: '0 4px 16px 0 rgba(0, 0, 0, 0.1)',
-                      }}
-                    >
-                      <ArrowUpRight className="w-6 h-6 text-white" />
-                    </motion.div>
-                  </div>
-                  
-                  {/* Content with glass effect */}
-                  <div 
-                    className="p-8"
-                    style={{
-                      background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
-                      backdropFilter: 'blur(10px)',
-                      WebkitBackdropFilter: 'blur(10px)',
-                    }}
-                  >
-                    <p className="text-xs font-medium text-red-500 mb-3 tracking-wider uppercase">
-                      {project.category}
-                    </p>
-                    <h3 className="text-2xl md:text-3xl font-light text-foreground/90 group-hover:text-red-600 transition-colors duration-500">
-                      {project.title}
-                    </h3>
-                  </div>
-                </motion.div>
-              </motion.div>
+                {/* Title */}
+                <h3 className="text-3xl font-serif font-bold mb-3 group-hover:underline decoration-4 decoration-foreground underline-offset-4">
+                  {project.title}
+                </h3>
+                
+                {/* Category badge */}
+                <div className="inline-block border-2 border-foreground px-4 py-1 text-xs font-mono uppercase tracking-wider mb-4 bg-foreground text-background">
+                  {project.category}
+                </div>
+                
+                {/* Description */}
+                <p className="font-serif text-lg leading-relaxed mb-4">
+                  {project.description}
+                </p>
+                
+                {/* Footer with year */}
+                <div className="border-t-2 border-foreground pt-4 flex justify-between items-center">
+                  <span className="text-sm font-mono uppercase tracking-wider">
+                    Year: {project.year}
+                  </span>
+                  <span className="text-2xl group-hover:translate-x-2 transition-transform duration-300">
+                    →
+                  </span>
+                </div>
+              </motion.article>
             ))}
           </div>
+
+          {/* View more button */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-center mt-12"
+          >
+            <button className="border-4 border-foreground px-10 py-3 font-serif font-bold text-lg uppercase bg-background hover:bg-foreground hover:text-background transition-all duration-300 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1">
+              View All Projects
+            </button>
+          </motion.div>
         </div>
       </div>
     </section>

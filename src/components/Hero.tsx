@@ -1,156 +1,93 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Sparkles } from 'lucide-react';
-import { Background3D } from './Background3D';
+import { NewspaperDoodles } from './NewspaperDoodles';
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* 3D Bubble Background */}
-      <Background3D />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      <NewspaperDoodles />
       
-      {/* Rich gradient background for glass effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-red-100 via-orange-100 to-pink-100 opacity-40" />
-
-      {/* Animated blobs - stronger colors */}
-      <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-red-400 to-orange-400 opacity-40 rounded-full blur-3xl animate-blob" />
-      <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-gradient-to-br from-orange-400 to-pink-400 opacity-40 rounded-full blur-3xl animate-blob" style={{ animationDelay: '2s' }} />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-rose-400 to-red-400 opacity-30 rounded-full blur-3xl animate-blob" style={{ animationDelay: '4s' }} />
-
-      {/* Content */}
+      {/* Newspaper texture overlay */}
+      <div className="absolute inset-0 opacity-5 bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,currentColor_2px,currentColor_3px)]" />
+      
+      {/* Main content */}
       <div className="relative z-10 container mx-auto px-6 py-32">
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto">
+          {/* Newspaper masthead style */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center mb-12"
           >
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8 text-balance">
-              <motion.span 
-                className="block text-foreground/90 mb-3"
-                animate={{ 
-                  textShadow: [
-                    "0 0 20px rgba(239, 68, 68, 0)",
-                    "0 0 30px rgba(239, 68, 68, 0.3)",
-                    "0 0 20px rgba(239, 68, 68, 0)"
-                  ]
-                }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              >
-                Hey there
-              </motion.span>
-              <motion.span 
-                className="block font-medium bg-gradient-to-r from-red-500 via-orange-500 to-rose-500 bg-clip-text text-transparent"
-                style={{
-                  backgroundSize: "200% auto",
-                }}
-                animate={{
-                  backgroundPosition: ["0% center", "100% center", "0% center"],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-              >
-                I'm a Designer
-              </motion.span>
+            {/* Date and edition */}
+            <div className="text-xs tracking-widest uppercase mb-4 text-muted-foreground font-mono">
+              Portfolio Edition • {new Date().getFullYear()}
+            </div>
+            
+            {/* Main headline */}
+            <h1 className="text-7xl md:text-8xl lg:text-9xl font-serif font-bold tracking-tight mb-6 relative">
+              <span className="block mb-2">Designer</span>
+              <span className="block text-5xl md:text-6xl font-light italic">& Creative</span>
+              
+              {/* Decorative underlines */}
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-foreground" />
+              <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-foreground" />
             </h1>
           </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="text-xl md:text-2xl text-muted-foreground/80 max-w-2xl mx-auto mb-16 font-light leading-relaxed"
-          >
-            Creating beautiful, intuitive experiences
-          </motion.p>
-
+          {/* Subheading in newspaper column style */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="relative inline-block"
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="max-w-2xl mx-auto"
           >
-            {/* Animated glow rings */}
-            <motion.div
-              className="absolute inset-0 rounded-full"
-              animate={{
-                scale: [1, 1.2, 1],
-                opacity: [0.5, 0, 0.5],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              style={{
-                background: 'radial-gradient(circle, rgba(239, 68, 68, 0.4) 0%, transparent 70%)',
-                filter: 'blur(20px)',
-              }}
-            />
-            
-            {/* Main button */}
+            <div className="border-t-4 border-b-4 border-foreground py-6 mb-12">
+              <p className="text-xl md:text-2xl text-center font-serif leading-relaxed">
+                Creating beautiful, intuitive experiences through thoughtful design and innovation
+              </p>
+            </div>
+          </motion.div>
+
+          {/* CTA Button - newspaper style */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            className="text-center"
+          >
             <motion.a
               href="#work"
-              className="group relative px-12 py-5 overflow-hidden rounded-full inline-flex items-center gap-3 cursor-pointer"
-              whileHover={{ scale: 1.05 }}
+              className="inline-block px-12 py-4 border-4 border-foreground bg-foreground text-background font-serif font-bold text-lg tracking-wide uppercase hover:bg-background hover:text-foreground transition-all duration-300 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1"
+              whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              style={{
-                background: 'linear-gradient(135deg, rgba(239, 68, 68, 0.9) 0%, rgba(249, 115, 22, 0.9) 100%)',
-                backdropFilter: 'blur(20px) saturate(180%)',
-                WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-                border: '2px solid rgba(255, 255, 255, 0.4)',
-                boxShadow: '0 20px 60px -15px rgba(239, 68, 68, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
-              }}
             >
-              {/* Animated sparkle */}
-              <motion.div
-                animate={{
-                  rotate: [0, 180, 360],
-                  scale: [1, 1.2, 1],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              >
-                <Sparkles className="w-5 h-5 text-white" />
-              </motion.div>
-              
-              <span className="relative z-10 text-white font-medium text-lg">View My Work</span>
-              
-              <motion.span 
-                className="inline-block text-white"
-                animate={{ x: [0, 5, 0] }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              >
-                →
-              </motion.span>
-              
-              {/* Animated shine effect */}
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent"
-                animate={{
-                  x: ['-200%', '200%'],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "linear",
-                  repeatDelay: 1,
-                }}
-              />
+              View Portfolio →
             </motion.a>
+          </motion.div>
+
+          {/* Decorative newspaper elements */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6, duration: 1 }}
+            className="mt-20 grid grid-cols-3 gap-4 text-center text-xs uppercase tracking-wider font-mono border-t border-b border-foreground py-4"
+          >
+            <div className="border-r border-foreground">
+              <div className="font-bold">Est. 2019</div>
+              <div className="text-muted-foreground">Since</div>
+            </div>
+            <div className="border-r border-foreground">
+              <div className="font-bold">50+ Projects</div>
+              <div className="text-muted-foreground">Completed</div>
+            </div>
+            <div>
+              <div className="font-bold">Award Winner</div>
+              <div className="text-muted-foreground">Designer</div>
+            </div>
           </motion.div>
         </div>
       </div>
-
     </section>
   );
 };

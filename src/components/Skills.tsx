@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { ScrollHexagons } from './ScrollHexagons';
-import { Background3D } from './Background3D';
+import { NewspaperDoodles } from './NewspaperDoodles';
 
 const skills = [
   'Visual Design',
@@ -27,72 +26,91 @@ export const Skills = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="skills" className="py-40 relative overflow-hidden">
-      <Background3D />
-      <ScrollHexagons sectionIndex={2} />
-      <div className="absolute inset-0 bg-gradient-to-b from-rose-50/20 via-orange-50/20 to-red-50/20" />
+    <section id="skills" className="py-32 relative overflow-hidden bg-background border-t-4 border-foreground">
+      <NewspaperDoodles />
       
       <div className="container mx-auto px-6 relative z-10">
         <div ref={ref} className="max-w-4xl mx-auto">
+          {/* Section header */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-center mb-24"
+            transition={{ duration: 0.6 }}
+            className="mb-16 text-center"
           >
-            <h2 className="text-5xl md:text-6xl font-light mb-8 text-foreground/90">
-              Expertise
-            </h2>
-            <div className="w-16 h-0.5 bg-gradient-to-r from-red-300 to-orange-300 mx-auto rounded-full" />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-20"
-          >
-            <h3 className="text-xl font-light text-muted-foreground/60 mb-8 text-center">
-              Skills
-            </h3>
-            <div className="flex flex-wrap justify-center gap-3">
-              {skills.map((skill, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                  className="px-6 py-3 bg-white/40 backdrop-blur-xl border border-white/20 rounded-full text-foreground/80 font-light transition-all duration-500 hover:bg-white/50 hover:border-white/30 hover:shadow-lg cursor-pointer"
-                >
-                  {skill}
-                </motion.div>
-              ))}
+            <div className="inline-block border-4 border-foreground px-8 py-3 bg-foreground text-background">
+              <h2 className="text-5xl md:text-6xl font-serif font-bold tracking-tight">
+                Expertise & Tools
+              </h2>
             </div>
           </motion.div>
 
+          {/* Skills section */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-16"
           >
-            <h3 className="text-xl font-light text-muted-foreground/60 mb-8 text-center">
-              Tools
-            </h3>
-            <div className="flex flex-wrap justify-center gap-3">
-              {tools.map((tool, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  transition={{ duration: 0.6, delay: 0.7 + index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                  className="px-6 py-3 bg-white/40 backdrop-blur-xl border border-white/20 rounded-full text-foreground/80 font-light transition-all duration-500 hover:bg-white/50 hover:border-white/30 hover:shadow-lg cursor-pointer"
-                >
-                  {tool}
-                </motion.div>
-              ))}
+            <div className="border-4 border-foreground bg-card p-8">
+              <h3 className="text-3xl font-serif font-bold mb-6 pb-4 border-b-2 border-foreground">
+                Core Skills
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {skills.map((skill, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 0.4, delay: 0.3 + index * 0.05 }}
+                    className="border-2 border-foreground p-4 text-center font-serif hover:bg-foreground hover:text-background transition-all duration-300 cursor-pointer"
+                  >
+                    • {skill}
+                  </motion.div>
+                ))}
+              </div>
             </div>
+          </motion.div>
+
+          {/* Tools section */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <div className="border-4 border-foreground bg-card p-8">
+              <h3 className="text-3xl font-serif font-bold mb-6 pb-4 border-b-2 border-foreground">
+                Tools of the Trade
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {tools.map((tool, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 0.4, delay: 0.5 + index * 0.05 }}
+                    className="border-2 border-foreground p-4 text-center font-mono uppercase text-sm tracking-wider hover:bg-foreground hover:text-background transition-all duration-300 cursor-pointer"
+                  >
+                    {tool}
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Quote box */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="mt-12 border-4 border-foreground p-8 bg-foreground text-background text-center"
+          >
+            <p className="text-2xl md:text-3xl font-serif italic leading-relaxed">
+              "Design is not just what it looks like and feels like. Design is how it works."
+            </p>
+            <p className="mt-4 text-sm font-mono uppercase tracking-widest">
+              — Steve Jobs
+            </p>
           </motion.div>
         </div>
       </div>
