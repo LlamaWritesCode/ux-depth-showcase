@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { NewspaperDoodles } from './NewspaperDoodles';
-import aboutIllustration from '@/assets/about-illustration.jpg';
+import aboutIllustration from '@/assets/about-illustration.png';
 
 export const About = () => {
   const ref = useRef(null);
