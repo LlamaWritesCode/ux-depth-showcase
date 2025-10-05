@@ -71,23 +71,6 @@ export const About = () => {
             </motion.svg>
 
             <motion.svg
-              className="absolute bottom-12 left-20 w-18 h-18 text-foreground opacity-30 z-10"
-              viewBox="0 0 50 50"
-              animate={{ rotate: -360 }}
-              transition={{ duration: 9, repeat: Infinity, ease: "linear" }}
-            >
-              <circle
-                cx="25"
-                cy="25"
-                r="20"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeDasharray="5,5"
-              />
-            </motion.svg>
-
-            <motion.svg
               className="absolute bottom-8 right-12 w-14 h-14 text-foreground opacity-30 z-10"
               viewBox="0 0 25 25"
               animate={{ rotate: 360 }}
