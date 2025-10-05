@@ -21,7 +21,7 @@ export const About = () => {
             transition={{ duration: 0.6 }}
             className="mb-16 text-center"
           >
-            <div className="inline-block border-4 border-foreground px-8 py-3 bg-foreground text-background">
+            <div className="inline-block border-4 border-foreground px-8 py-3 bg-foreground text-background shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-shadow duration-300">
               <h2 className="text-5xl md:text-6xl font-serif font-bold tracking-tight">
                 About the Designer
               </h2>
@@ -33,7 +33,7 @@ export const About = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mb-12 overflow-hidden"
+            className="mb-12 overflow-hidden -mt-8"
           >
             <img 
               src={aboutIllustration} 
