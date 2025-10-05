@@ -182,6 +182,158 @@ export const NewspaperDoodles = () => {
       >
         <path d="M15 3 L16 14 L15 25 L14 14 Z M3 15 L14 16 L25 15 L14 14 Z" fill="currentColor" />
       </motion.svg>
+
+      {/* Arrow pointing right */}
+      <motion.svg
+        className="absolute top-1/2 right-10"
+        width="50"
+        height="30"
+        viewBox="0 0 50 30"
+        animate={{ x: [0, 8, 0] }}
+        transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <path d="M5 15 L35 15 M30 10 L38 15 L30 20" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      </motion.svg>
+
+      {/* Coffee cup */}
+      <motion.svg
+        className="absolute bottom-1/2 left-10"
+        width="40"
+        height="45"
+        viewBox="0 0 40 45"
+        animate={{ rotate: [0, -5, 5, 0] }}
+        transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <path d="M10 15 L10 30 Q10 35 15 35 L25 35 Q30 35 30 30 L30 15 Z" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        <path d="M30 20 L35 20 Q38 20 38 23 Q38 26 35 26 L30 26" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        <path d="M8 12 L32 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        {/* Steam lines */}
+        <path d="M15 8 Q15 5 17 3" stroke="currentColor" strokeWidth="1" fill="none" strokeLinecap="round" />
+        <path d="M20 8 Q20 5 22 3" stroke="currentColor" strokeWidth="1" fill="none" strokeLinecap="round" />
+        <path d="M25 8 Q25 5 27 3" stroke="currentColor" strokeWidth="1" fill="none" strokeLinecap="round" />
+      </motion.svg>
+
+      {/* Asterisk */}
+      <motion.svg
+        className="absolute top-1/4 right-10"
+        width="30"
+        height="30"
+        viewBox="0 0 30 30"
+        animate={{ rotate: [0, 360] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+      >
+        <path d="M15 5 L15 25 M8 8 L22 22 M8 22 L22 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      </motion.svg>
+
+      {/* Exclamation mark */}
+      <motion.svg
+        className="absolute bottom-1/2 right-1/2"
+        width="20"
+        height="40"
+        viewBox="0 0 20 40"
+        animate={{ y: [0, -5, 0] }}
+        transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <path d="M10 5 L10 22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="10" cy="30" r="2.5" fill="currentColor" />
+      </motion.svg>
+
+      {/* Musical note */}
+      <motion.svg
+        className="absolute top-3/4 left-1/3"
+        width="30"
+        height="40"
+        viewBox="0 0 30 40"
+        animate={{ rotate: [0, 10, -10, 0] }}
+        transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <circle cx="8" cy="32" r="5" fill="none" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M13 32 L13 8 L25 5 L25 25" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        <circle cx="25" cy="25" r="4" fill="none" stroke="currentColor" strokeWidth="1.5" />
+      </motion.svg>
+
+      {/* Small dots cluster */}
+      <motion.svg
+        className="absolute top-1/3 left-10"
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        animate={{ opacity: [0.5, 1, 0.5] }}
+        transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <circle cx="10" cy="10" r="2" fill="currentColor" />
+        <circle cx="20" cy="8" r="1.5" fill="currentColor" />
+        <circle cx="30" cy="12" r="2.5" fill="currentColor" />
+        <circle cx="15" cy="20" r="2" fill="currentColor" />
+        <circle cx="25" cy="22" r="1.5" fill="currentColor" />
+        <circle cx="18" cy="30" r="2" fill="currentColor" />
+      </motion.svg>
+
+      {/* Pencil */}
+      <motion.svg
+        className="absolute bottom-1/3 left-1/3"
+        width="50"
+        height="50"
+        viewBox="0 0 50 50"
+        animate={{ rotate: [0, 15, 0] }}
+        transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <path d="M10 40 L20 30 L35 15 L40 20 L25 35 L15 45 Z" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
+        <path d="M20 30 L25 35" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M35 15 L40 20" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M10 40 L8 48 L15 45" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
+      </motion.svg>
+
+      {/* Curved arrow */}
+      <motion.svg
+        className="absolute top-1/2 left-1/2"
+        width="50"
+        height="50"
+        viewBox="0 0 50 50"
+        animate={{ rotate: [0, -360] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+      >
+        <path d="M25 10 Q35 15 35 25 Q35 35 25 40" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+        <path d="M32 38 L25 40 L27 33" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
+      </motion.svg>
+
+      {/* Question mark */}
+      <motion.svg
+        className="absolute bottom-20 left-1/4"
+        width="25"
+        height="45"
+        viewBox="0 0 25 45"
+        animate={{ scale: [1, 1.15, 1] }}
+        transition={{ duration: 1.3, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <path d="M8 10 Q8 5 12.5 5 Q17 5 17 10 Q17 15 12.5 18 L12.5 25" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" />
+        <circle cx="12.5" cy="33" r="2.5" fill="currentColor" />
+      </motion.svg>
+
+      {/* Sun */}
+      <motion.svg
+        className="absolute top-10 right-1/3"
+        width="45"
+        height="45"
+        viewBox="0 0 45 45"
+        animate={{ rotate: 360 }}
+        transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+      >
+        <circle cx="22.5" cy="22.5" r="8" fill="none" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M22.5 5 L22.5 12 M22.5 33 L22.5 40 M5 22.5 L12 22.5 M33 22.5 L40 22.5 M10 10 L15 15 M30 30 L35 35 M10 35 L15 30 M30 15 L35 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      </motion.svg>
+
+      {/* Checkmark */}
+      <motion.svg
+        className="absolute bottom-10 right-1/4"
+        width="35"
+        height="35"
+        viewBox="0 0 35 35"
+        animate={{ scale: [1, 1.2, 1] }}
+        transition={{ duration: 1.1, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <path d="M8 18 L14 25 L27 10" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      </motion.svg>
     </div>
   );
 };
