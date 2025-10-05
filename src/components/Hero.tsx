@@ -7,7 +7,7 @@ export const Hero = () => {
       {/* Soft salmon gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-red-50 via-orange-50 to-pink-50" />
 
-      {/* Animated blobs - salmon tones */}
+      {/* Animated blobs - more fluid */}
       <div className="absolute top-20 left-10 w-96 h-96 bg-red-200/20 rounded-full blur-3xl animate-blob" />
       <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-orange-200/20 rounded-full blur-3xl animate-blob" style={{ animationDelay: '2s' }} />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-rose-200/15 rounded-full blur-3xl animate-blob" style={{ animationDelay: '4s' }} />
@@ -45,10 +45,17 @@ export const Hero = () => {
           >
             <a
               href="#work"
-              className="group px-10 py-4 bg-gradient-to-r from-red-400 to-orange-400 text-white rounded-full font-light text-lg transition-all duration-700 hover:scale-105 hover:shadow-2xl shadow-lg shadow-red-300/30"
+              className="group relative px-10 py-4 bg-white/30 backdrop-blur-xl border border-white/20 text-foreground rounded-full font-light text-lg transition-all duration-700 hover:scale-105 hover:bg-white/40 hover:shadow-2xl hover:shadow-red-200/20"
             >
-              View Work
+              <span className="relative z-10">View Work</span>
               <span className="ml-2 inline-block transition-transform duration-500 group-hover:translate-x-2">→</span>
+              {/* Shine effect */}
+              <motion.div
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                initial={{ x: '-100%' }}
+                whileHover={{ x: '100%' }}
+                transition={{ duration: 0.8 }}
+              />
             </a>
           </motion.div>
         </div>
@@ -64,8 +71,13 @@ export const Hero = () => {
         <motion.div
           animate={{ y: [0, 12, 0] }}
           transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+          className="w-8 h-12 rounded-full border-2 border-red-300/30 flex items-start justify-center p-2"
         >
-          <ArrowDown className="w-5 h-5 text-red-300" />
+          <motion.div
+            animate={{ y: [0, 16, 0] }}
+            transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+            className="w-1.5 h-1.5 rounded-full bg-red-300"
+          />
         </motion.div>
       </motion.div>
     </section>

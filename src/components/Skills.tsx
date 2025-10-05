@@ -53,14 +53,15 @@ export const Skills = () => {
             <h3 className="text-xl font-light text-muted-foreground/60 mb-8 text-center">
               Skills
             </h3>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-3">
               {skills.map((skill, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                  whileHover={{ scale: 1.05, y: -2 }}
                   transition={{ duration: 0.6, delay: 0.4 + index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                  className="px-6 py-3 bg-white/40 backdrop-blur-sm border border-red-100/50 rounded-full text-foreground/80 font-light transition-all duration-500 hover:bg-white/60 hover:border-red-200"
+                  className="px-6 py-3 bg-white/40 backdrop-blur-xl border border-white/20 rounded-full text-foreground/80 font-light transition-all duration-500 hover:bg-white/50 hover:border-white/30 hover:shadow-lg cursor-pointer"
                 >
                   {skill}
                 </motion.div>
@@ -76,14 +77,15 @@ export const Skills = () => {
             <h3 className="text-xl font-light text-muted-foreground/60 mb-8 text-center">
               Tools
             </h3>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-3">
               {tools.map((tool, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                  whileHover={{ scale: 1.05, y: -2 }}
                   transition={{ duration: 0.6, delay: 0.7 + index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                  className="px-6 py-3 bg-white/40 backdrop-blur-sm border border-red-100/50 rounded-full text-foreground/80 font-light transition-all duration-500 hover:bg-white/60 hover:border-red-200"
+                  className="px-6 py-3 bg-white/40 backdrop-blur-xl border border-white/20 rounded-full text-foreground/80 font-light transition-all duration-500 hover:bg-white/50 hover:border-white/30 hover:shadow-lg cursor-pointer"
                 >
                   {tool}
                 </motion.div>

@@ -45,29 +45,40 @@ export const Contact = () => {
             transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="text-center mb-16"
           >
-            <a
+            <motion.a
               href="mailto:hello@designer.com"
-              className="inline-block px-12 py-5 bg-gradient-to-r from-red-400 to-orange-400 text-white rounded-full font-light text-xl transition-all duration-700 hover:scale-105 hover:shadow-2xl shadow-lg shadow-red-300/30"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              className="group relative inline-block px-12 py-5 bg-white/30 backdrop-blur-xl border border-white/20 text-foreground rounded-full font-light text-xl transition-all duration-700 hover:bg-white/40 hover:shadow-2xl overflow-hidden"
             >
-              Get in Touch
-            </a>
+              <span className="relative z-10">Get in Touch</span>
+              {/* Shine effect */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                initial={{ x: '-100%' }}
+                whileHover={{ x: '100%' }}
+                transition={{ duration: 0.8 }}
+              />
+            </motion.a>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="flex justify-center gap-6"
+            className="flex justify-center gap-4"
           >
             {socials.map((social, index) => (
-              <a
+              <motion.a
                 key={index}
                 href={social.href}
-                className="w-14 h-14 rounded-full bg-white/40 backdrop-blur-sm border border-red-100/50 flex items-center justify-center text-muted-foreground/60 hover:bg-white/60 hover:border-red-200 transition-all duration-500 hover:scale-110"
+                whileHover={{ scale: 1.1, y: -4 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-14 h-14 rounded-2xl bg-white/40 backdrop-blur-xl border border-white/20 flex items-center justify-center text-muted-foreground/60 hover:bg-white/50 hover:border-white/30 transition-all duration-500 shadow-lg hover:shadow-xl"
                 aria-label={social.label}
               >
                 <social.icon className="w-5 h-5" />
-              </a>
+              </motion.a>
             ))}
           </motion.div>
         </div>

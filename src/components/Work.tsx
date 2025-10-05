@@ -62,29 +62,36 @@ export const Work = () => {
                 transition={{ duration: 1, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
                 className={`group relative ${project.span}`}
               >
-                <div className="relative overflow-hidden rounded-3xl bg-white/40 backdrop-blur-sm border border-red-100/30 hover:border-red-200/50 transition-all duration-700 h-full">
+                {/* Glow effect */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-red-300/50 to-orange-300/50 rounded-3xl blur-lg opacity-0 group-hover:opacity-100 transition duration-1000" />
+                
+                <motion.div
+                  whileHover={{ y: -8 }}
+                  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                  className="relative overflow-hidden rounded-3xl bg-white/40 backdrop-blur-2xl border border-white/20 hover:border-white/30 transition-all duration-700 h-full shadow-xl hover:shadow-2xl"
+                >
                   {/* Image container */}
                   <div className="aspect-[4/3] overflow-hidden relative">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110"
+                      className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105"
                     />
                     {/* Gradient overlay on hover */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                     
                     {/* Floating button */}
                     <motion.div
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileHover={{ scale: 1 }}
-                      className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 shadow-lg"
+                      initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                      whileHover={{ scale: 1.1 }}
+                      className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/90 backdrop-blur-xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 shadow-lg hover:shadow-xl"
                     >
                       <ArrowUpRight className="w-5 h-5 text-red-400" />
                     </motion.div>
                   </div>
                   
                   {/* Content */}
-                  <div className="p-8">
+                  <div className="p-8 bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm">
                     <p className="text-xs font-medium text-red-400 mb-3 tracking-wider uppercase">
                       {project.category}
                     </p>
@@ -92,7 +99,7 @@ export const Work = () => {
                       {project.title}
                     </h3>
                   </div>
-                </div>
+                </motion.div>
               </motion.div>
             ))}
           </div>
