@@ -228,17 +228,21 @@ export const NewspaperDoodles = () => {
         <path d="M15 5 L15 25 M8 8 L22 22 M8 22 L22 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </motion.svg>
 
-      {/* Exclamation mark */}
+      {/* Cat face */}
       <motion.svg
         className="absolute bottom-1/2 right-1/2"
-        width="20"
+        width="40"
         height="40"
-        viewBox="0 0 20 40"
-        animate={{ y: [0, -5, 0] }}
-        transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+        viewBox="0 0 40 40"
+        animate={{ rotate: [0, -5, 5, 0] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
-        <path d="M10 5 L10 22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        <circle cx="10" cy="30" r="2.5" fill="currentColor" />
+        <circle cx="20" cy="22" r="12" fill="none" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="15" cy="20" r="1.5" fill="currentColor" />
+        <circle cx="25" cy="20" r="1.5" fill="currentColor" />
+        <path d="M15 26 Q20 28 25 26" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+        <path d="M8 12 L12 18 L16 12" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
+        <path d="M24 12 L28 18 L32 12" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
       </motion.svg>
 
       {/* Musical note */}
@@ -299,17 +303,18 @@ export const NewspaperDoodles = () => {
         <path d="M15 25 Q15 20 20 20 Q20 15 27 15 Q34 15 34 20 Q40 20 40 25 Q40 30 34 30 L20 30 Q15 30 15 25 Z" stroke="currentColor" strokeWidth="1.5" fill="none" />
       </motion.svg>
 
-      {/* Question mark */}
+      {/* Ice cream cone */}
       <motion.svg
         className="absolute bottom-20 left-1/4"
-        width="25"
-        height="45"
-        viewBox="0 0 25 45"
-        animate={{ scale: [1, 1.15, 1] }}
-        transition={{ duration: 1.3, repeat: Infinity, ease: "easeInOut" }}
+        width="35"
+        height="50"
+        viewBox="0 0 35 50"
+        animate={{ rotate: [0, 8, -8, 0] }}
+        transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
       >
-        <path d="M8 10 Q8 5 12.5 5 Q17 5 17 10 Q17 15 12.5 18 L12.5 25" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" />
-        <circle cx="12.5" cy="33" r="2.5" fill="currentColor" />
+        <circle cx="17.5" cy="15" r="10" fill="none" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M10 20 L17.5 45 L25 20 Z" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
+        <path d="M12 25 L23 25 M14 30 L21 30 M15.5 35 L19.5 35" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
       </motion.svg>
 
       {/* Sun */}
