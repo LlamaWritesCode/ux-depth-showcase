@@ -336,6 +336,119 @@ export const NewspaperDoodles = () => {
       >
         <path d="M8 18 L14 25 L27 10" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
       </motion.svg>
+
+      {/* Paper Plane 1 with dotted path */}
+      <div className="absolute top-1/4 right-1/4">
+        <svg width="400" height="200" viewBox="0 0 400 200" className="absolute">
+          <path
+            d="M0 100 Q100 50 200 80 Q300 110 400 60"
+            stroke="currentColor"
+            strokeWidth="1"
+            fill="none"
+            strokeDasharray="4 8"
+            opacity="0.3"
+          />
+        </svg>
+        <motion.svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          className="absolute"
+          animate={{
+            offsetDistance: ["0%", "100%"],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+          style={{
+            offsetPath: "path('M0 100 Q100 50 200 80 Q300 110 400 60')",
+          }}
+        >
+          <path
+            d="M5 20 L35 5 L35 35 L5 20 L35 20"
+            fill="currentColor"
+            stroke="none"
+          />
+        </motion.svg>
+      </div>
+
+      {/* Paper Plane 2 with dotted path */}
+      <div className="absolute top-1/2 left-10">
+        <svg width="350" height="180" viewBox="0 0 350 180" className="absolute">
+          <path
+            d="M0 50 Q80 120 180 100 Q280 80 350 130"
+            stroke="currentColor"
+            strokeWidth="1"
+            fill="none"
+            strokeDasharray="4 8"
+            opacity="0.3"
+          />
+        </svg>
+        <motion.svg
+          width="35"
+          height="35"
+          viewBox="0 0 40 40"
+          className="absolute"
+          animate={{
+            offsetDistance: ["0%", "100%"],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "linear",
+            delay: 2,
+          }}
+          style={{
+            offsetPath: "path('M0 50 Q80 120 180 100 Q280 80 350 130')",
+          }}
+        >
+          <path
+            d="M5 20 L35 5 L35 35 L5 20 L35 20"
+            fill="currentColor"
+            stroke="none"
+          />
+        </motion.svg>
+      </div>
+
+      {/* Paper Plane 3 with dotted path */}
+      <div className="absolute bottom-1/4 right-10">
+        <svg width="300" height="150" viewBox="0 0 300 150" className="absolute">
+          <path
+            d="M0 100 Q75 30 150 70 Q225 110 300 50"
+            stroke="currentColor"
+            strokeWidth="1"
+            fill="none"
+            strokeDasharray="4 8"
+            opacity="0.3"
+          />
+        </svg>
+        <motion.svg
+          width="35"
+          height="35"
+          viewBox="0 0 40 40"
+          className="absolute"
+          animate={{
+            offsetDistance: ["0%", "100%"],
+          }}
+          transition={{
+            duration: 9,
+            repeat: Infinity,
+            ease: "linear",
+            delay: 4,
+          }}
+          style={{
+            offsetPath: "path('M0 100 Q75 30 150 70 Q225 110 300 50')",
+          }}
+        >
+          <path
+            d="M5 20 L35 5 L35 35 L5 20 L35 20"
+            fill="currentColor"
+            stroke="none"
+          />
+        </motion.svg>
+      </div>
     </div>
   );
 };
