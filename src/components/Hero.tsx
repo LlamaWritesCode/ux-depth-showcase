@@ -117,30 +117,6 @@ export const Hero = () => {
                   repeatDelay: 1,
                 }}
               />
-              
-              {/* Particle effects */}
-              {[...Array(6)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className="absolute w-1 h-1 bg-white rounded-full"
-                  style={{
-                    top: '50%',
-                    left: '50%',
-                  }}
-                  animate={{
-                    x: [0, (Math.cos(i * 60 * Math.PI / 180) * 80)],
-                    y: [0, (Math.sin(i * 60 * Math.PI / 180) * 80)],
-                    opacity: [0, 1, 0],
-                    scale: [0, 1.5, 0],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    delay: i * 0.2,
-                    ease: "easeOut",
-                  }}
-                />
-              ))}
             </motion.a>
           </motion.div>
         </div>
