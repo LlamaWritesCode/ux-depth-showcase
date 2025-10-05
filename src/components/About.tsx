@@ -9,7 +9,7 @@ export const About = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="about" className="py-32 relative overflow-hidden bg-background border-t-4 border-foreground">
+    <section id="about" className="py-32 relative overflow-hidden bg-background tear-top tear-bottom">
       <NewspaperDoodles />
       
       {/* Newspaper texture overlay */}
@@ -36,7 +36,7 @@ export const About = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mb-12 -mt-16 relative"
+            className="mb-12 -mt-16 relative halftone-overlay"
           >
             <img 
               src={aboutIllustration} 
