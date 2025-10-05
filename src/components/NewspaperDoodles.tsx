@@ -192,7 +192,7 @@ export const NewspaperDoodles = () => {
             fill="none"
             stroke="currentColor"
             strokeWidth="1.5"
-            strokeDasharray="4 4"
+            strokeDasharray="3 8"
             strokeLinecap="round"
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
@@ -218,7 +218,7 @@ export const NewspaperDoodles = () => {
             fill="none"
             stroke="currentColor"
             strokeWidth="1.5"
-            strokeDasharray="4 4"
+            strokeDasharray="3 8"
             strokeLinecap="round"
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
@@ -244,7 +244,7 @@ export const NewspaperDoodles = () => {
             fill="none"
             stroke="currentColor"
             strokeWidth="1.5"
-            strokeDasharray="4 4"
+            strokeDasharray="3 8"
             strokeLinecap="round"
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
