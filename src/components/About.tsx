@@ -38,10 +38,19 @@ export const About = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mb-12 -mt-16 relative"
           >
-            <img 
+            <motion.img 
               src={aboutIllustration} 
               alt="Designer at work" 
               className="w-full h-auto relative z-0 mix-blend-multiply opacity-80"
+              animate={{ 
+                rotate: [0, -1, 1, -1, 0],
+                y: [0, -3, 2, -2, 0]
+              }}
+              transition={{ 
+                duration: 5, 
+                repeat: Infinity, 
+                ease: "easeInOut" 
+              }}
             />
             
             {/* Doodles overlapping the illustration */}
