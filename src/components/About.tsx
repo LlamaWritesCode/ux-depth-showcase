@@ -27,7 +27,7 @@ export const About = () => {
             transition={{ 
               opacity: { duration: 0.6 },
               y: { 
-                duration: 8, 
+                duration: 9, 
                 repeat: Infinity, 
                 ease: "easeInOut",
                 delay: 0.6
@@ -58,7 +58,7 @@ export const About = () => {
                 rotate: [0, 0.5, 0, -0.5, 0]
               }}
               transition={{ 
-                duration: 2.5, 
+                duration: 3.5, 
                 repeat: Infinity, 
                 ease: "easeInOut",
                 times: [0, 0.5, 1]
