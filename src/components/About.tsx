@@ -20,8 +20,19 @@ export const About = () => {
           {/* Newspaper section header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
+            animate={isInView ? { 
+              opacity: 1, 
+              y: [0, -6, 0] 
+            } : {}}
+            transition={{ 
+              opacity: { duration: 0.6 },
+              y: { 
+                duration: 4, 
+                repeat: Infinity, 
+                ease: "easeInOut",
+                delay: 0.6
+              }
+            }}
             className="mb-16 text-center"
           >
             <div className="inline-block border-4 border-foreground px-8 py-3 bg-foreground text-background shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-shadow duration-300">
