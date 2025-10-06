@@ -22,16 +22,10 @@ export const About = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { 
               opacity: 1, 
-              y: [0, -6, 0] 
+              y: 0 
             } : {}}
             transition={{ 
-              opacity: { duration: 0.6 },
-              y: { 
-                duration: 4, 
-                repeat: Infinity, 
-                ease: "easeInOut",
-                delay: 0.6
-              }
+              duration: 0.6
             }}
             className="mb-16 text-center"
           >
