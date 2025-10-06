@@ -58,7 +58,7 @@ export const About = () => {
                 rotate: [0, 0.5, 0, -0.5, 0]
               }}
               transition={{ 
-                duration: 3.5, 
+                duration: 2, 
                 repeat: Infinity, 
                 ease: "easeInOut",
                 times: [0, 0.5, 1]
