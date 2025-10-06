@@ -43,13 +43,14 @@ export const About = () => {
               alt="Designer at work" 
               className="w-full h-auto relative z-0 mix-blend-multiply opacity-80"
               animate={{ 
-                rotate: [0, -1, 1, -1, 0],
-                y: [0, -3, 2, -2, 0]
+                y: [0, -8, 0],
+                rotate: [0, 0.5, 0, -0.5, 0]
               }}
               transition={{ 
-                duration: 5, 
+                duration: 6, 
                 repeat: Infinity, 
-                ease: "easeInOut" 
+                ease: "easeInOut",
+                times: [0, 0.5, 1]
               }}
             />
             
