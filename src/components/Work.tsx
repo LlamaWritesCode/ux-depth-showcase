@@ -99,9 +99,14 @@ export const Work = () => {
                   <span className="text-sm font-mono uppercase tracking-wider">
                     {project.year}
                   </span>
-                  <span className="text-2xl group-hover:translate-x-2 transition-transform duration-300">
+                  {/* <span className="text-2xl group-hover:translate-x-2 transition-transform duration-300">
                     →
-                  </span>
+                  </span> */}
+                  {(project.title === 'SoundCloud Redesign' || project.title === 'AI Remix My Design') && (
+                    <button className="border-2 border-foreground px-4 py-1 text-sm font-mono uppercase tracking-wider bg-foreground text-background hover:bg-background hover:text-foreground transition-all duration-200">
+                      View
+                    </button>
+                  )}
                 </div>
               </motion.article>
             ))}
