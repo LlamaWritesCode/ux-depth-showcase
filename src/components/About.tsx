@@ -134,7 +134,7 @@ export const About = () => {
               <div className="grid grid-cols-3 gap-6 text-center">
                 {[
                   { label: 'Years Experience', value: '3+' },
-                  { label: 'Products Designed', value: '10+' },
+                  { label: 'Products Designed', value: '4+' },
                   { label: 'GPA', value: '3.8' },
                 ].map((stat, index) => (
                   <motion.div
