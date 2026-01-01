@@ -26,8 +26,8 @@ export const Hero = () => {
             
             {/* Main headline */}
             <h1 className="text-7xl md:text-8xl lg:text-9xl font-serif font-bold tracking-tight mb-6 relative">
-              <span className="block mb-2">Designer</span>
-              <span className="block text-5xl md:text-6xl font-light italic">& Creative</span>
+              <span className="block mb-2">Somya Singh</span>
+              <span className="block text-5xl md:text-6xl font-light italic">UX Designer</span>
               
               {/* Decorative underlines */}
               <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-foreground" />
@@ -44,7 +44,7 @@ export const Hero = () => {
           >
             <div className="border-t-4 border-b-4 border-foreground py-6 mb-12">
               <p className="text-xl md:text-2xl text-center font-serif leading-relaxed">
-                Creating beautiful, intuitive experiences through thoughtful design and innovation
+                Crafting user-centered experiences through research-driven design, accessibility, and cross-functional collaboration
               </p>
             </div>
           </motion.div>
@@ -74,16 +74,16 @@ export const Hero = () => {
             className="mt-20 grid grid-cols-3 gap-4 text-center text-xs uppercase tracking-wider font-mono border-t border-b border-foreground py-4"
           >
             <div className="border-r border-foreground">
-              <div className="font-bold">Est. 2019</div>
+              <div className="font-bold">Est. 2022</div>
               <div className="text-muted-foreground">Since</div>
             </div>
             <div className="border-r border-foreground">
-              <div className="font-bold">50+ Projects</div>
-              <div className="text-muted-foreground">Completed</div>
+              <div className="font-bold">MS in IS</div>
+              <div className="text-muted-foreground">UMBC</div>
             </div>
             <div>
-              <div className="font-bold">Award Winner</div>
-              <div className="text-muted-foreground">Designer</div>
+              <div className="font-bold">Google & IBM</div>
+              <div className="text-muted-foreground">Certified</div>
             </div>
           </motion.div>
         </div>

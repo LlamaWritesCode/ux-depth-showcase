@@ -5,28 +5,32 @@ import { NewspaperDoodles } from './NewspaperDoodles';
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
+    title: 'CMS Framework Design',
     category: 'UX/UI Design',
-    description: 'Complete redesign of shopping experience',
-    year: '2024',
+    description: 'Designed end-to-end user experiences for a CMS framework, translating research into scalable UI components adopted across 10+ internal products.',
+    year: '2022-2024',
+    company: 'Sparksoft Corp',
   },
   {
-    title: 'Mobile Banking App',
+    title: 'SoundCloud Redesign',
+    category: 'UX Redesign',
+    description: 'Redesigned the SoundCloud website and logo, improving navigation, user flows, and visual consistency across 5+ screens with accessibility best practices.',
+    year: '2024',
+    company: 'Personal Project',
+  },
+  {
+    title: 'AI Remix My Design',
     category: 'Product Design',
-    description: 'Secure and intuitive financial management',
-    year: '2023',
-  },
-  {
-    title: 'Healthcare Dashboard',
-    category: 'UX Research & Design',
-    description: 'Patient data visualization and analytics',
-    year: '2023',
-  },
-  {
-    title: 'SaaS Platform',
-    category: 'UI/UX Design',
-    description: 'Enterprise collaboration tool',
+    description: 'Designed an AI tool with Figma and Adobe Express APIs, enabling rapid UI mockup transformations into multiple themes, cutting redesign effort by 50%.',
     year: '2024',
+    company: 'Personal Project',
+  },
+  {
+    title: 'Healthcare UX',
+    category: 'UX Research & Design',
+    description: 'Conducted user-centered analysis to translate business goals into end-to-end workflows and traceability matrices, supporting 5+ core product features.',
+    year: '2022',
+    company: 'Optum',
   },
 ];
 
@@ -72,7 +76,7 @@ export const Work = () => {
               >
                 {/* Project number */}
                 <div className="text-xs font-mono tracking-wider mb-4 text-muted-foreground">
-                  PROJECT #{(index + 1).toString().padStart(2, '0')}
+                  {project.company}
                 </div>
                 
                 {/* Title */}
@@ -93,7 +97,7 @@ export const Work = () => {
                 {/* Footer with year */}
                 <div className="border-t-2 border-foreground pt-4 flex justify-between items-center">
                   <span className="text-sm font-mono uppercase tracking-wider">
-                    Year: {project.year}
+                    {project.year}
                   </span>
                   <span className="text-2xl group-hover:translate-x-2 transition-transform duration-300">
                     →

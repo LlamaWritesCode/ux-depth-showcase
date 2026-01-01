@@ -9,8 +9,8 @@ export const Contact = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   const socials = [
-    { icon: Mail, label: 'Email', href: 'mailto:hello@designer.com' },
-    { icon: Linkedin, label: 'LinkedIn', href: '#' },
+    { icon: Mail, label: 'Email', href: 'mailto:ssingh12@umbc.edu' },
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/somyasingh' },
     { icon: Twitter, label: 'Twitter', href: '#' },
     { icon: Github, label: 'GitHub', href: '#' },
   ];
@@ -51,7 +51,7 @@ export const Contact = () => {
             {/* Email CTA */}
             <div className="text-center mb-12">
               <motion.a
-                href="mailto:hello@designer.com"
+                href="mailto:ssingh12@umbc.edu"
                 className="inline-block border-4 border-foreground px-12 py-4 font-serif font-bold text-2xl bg-foreground text-background hover:bg-background hover:text-foreground transition-all duration-300 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -122,7 +122,7 @@ export const Contact = () => {
         className="mt-20 pt-8 border-t-2 border-foreground text-center relative z-10"
       >
         <p className="font-mono text-sm uppercase tracking-widest">
-          © {new Date().getFullYear()} Designer Portfolio • All Rights Reserved
+          © {new Date().getFullYear()} Somya Singh • All Rights Reserved
         </p>
       </motion.footer>
     </section>
