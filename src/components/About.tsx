@@ -113,18 +113,18 @@ export const About = () => {
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="font-serif text-lg leading-relaxed border-r-2 border-foreground pr-8">
                 <p className="mb-6 first-letter:text-7xl first-letter:font-bold first-letter:mr-2 first-letter:float-left first-letter:leading-none">
-                  I'm a UX/UI and Product Designer with a passion for creating exceptional digital experiences that make a real difference in people's lives.
+                  I'm a UX Designer pursuing my Master's in Information Systems at UMBC, specializing in Data Science, HCI & UX Design. I create scalable, accessible experiences through research and collaboration.
                 </p>
                 <p className="mb-6">
-                  My approach combines user-centered design thinking with a deep understanding of modern technology and human psychology.
+                  My approach combines user-centered design thinking with data-driven insights, ensuring every decision is backed by research and real user feedback.
                 </p>
               </div>
               <div className="font-serif text-lg leading-relaxed">
                 <p className="mb-6">
-                  I believe great design is invisible—it simply works. Every project is an opportunity to solve real problems through creative, thoughtful solutions.
+                  At Sparksoft Corp and Optum, I designed end-to-end user experiences, conducted usability testing, and improved task success rates by 25% while meeting WCAG 2.1 accessibility standards.
                 </p>
                 <p>
-                  With over 5 years of experience, I've helped dozens of clients bring their visions to life through beautiful, functional design.
+                  I'm certified in Google UX Design, Google Project Management, and IBM Scrum Master—bringing a holistic understanding of design and delivery.
                 </p>
               </div>
             </div>
@@ -133,9 +133,9 @@ export const About = () => {
             <div className="border-t-2 border-foreground pt-8 mt-8">
               <div className="grid grid-cols-3 gap-6 text-center">
                 {[
-                  { label: 'Years Experience', value: '5+' },
-                  { label: 'Projects Completed', value: '50+' },
-                  { label: 'Happy Clients', value: '30+' },
+                  { label: 'Years Experience', value: '3+' },
+                  { label: 'Products Designed', value: '10+' },
+                  { label: 'GPA', value: '3.8' },
                 ].map((stat, index) => (
                   <motion.div
                     key={index}

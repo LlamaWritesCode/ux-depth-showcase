@@ -4,21 +4,36 @@ import { useRef } from 'react';
 import { NewspaperDoodles } from './NewspaperDoodles';
 
 const skills = [
-  'Visual Design',
-  'User Research',
-  'Prototyping',
-  'Design Systems',
+  'UX Design',
+  'UI Design',
   'Interaction Design',
   'Wireframing',
+  'Prototyping',
+  'User Research',
+  'Usability Testing',
+  'Information Architecture',
+  'Accessibility (WCAG)',
+  'A/B Testing',
+  'User Journey Mapping',
+  'Heuristic Evaluation',
 ];
 
 const tools = [
   'Figma',
-  'Adobe XD',
   'Sketch',
-  'Framer',
-  'Principle',
-  'After Effects',
+  'InVision',
+  'Adobe Illustrator',
+  'Adobe InDesign',
+  'Adobe Creative Suite',
+  'Canva',
+  'JIRA',
+];
+
+const certifications = [
+  'Google UX Design',
+  'Google Project Management',
+  'IBM IT Scrum Master',
+  'IBM Python for Data Science',
 ];
 
 export const Skills = () => {
@@ -101,19 +116,31 @@ export const Skills = () => {
             </div>
           </motion.div>
 
-          {/* Quote box */}
+          {/* Certifications section */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-12 border-4 border-foreground p-8 bg-foreground text-background text-center"
+            className="mt-12"
           >
-            <p className="text-2xl md:text-3xl font-serif italic leading-relaxed">
-              "Design is not just what it looks like and feels like. Design is how it works."
-            </p>
-            <p className="mt-4 text-sm font-mono uppercase tracking-widest">
-              — Steve Jobs
-            </p>
+            <div className="border-4 border-foreground bg-card p-8">
+              <h3 className="text-3xl font-serif font-bold mb-6 pb-4 border-b-2 border-foreground">
+                Certifications
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {certifications.map((cert, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 0.4, delay: 0.7 + index * 0.05 }}
+                    className="border-2 border-foreground p-4 text-center font-mono uppercase text-xs tracking-wider hover:bg-foreground hover:text-background transition-all duration-300 cursor-pointer"
+                  >
+                    {cert}
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
