@@ -78,8 +78,8 @@ export const Hero = () => {
               <div className="text-muted-foreground">Since</div>
             </div>
             <div className="border-r border-foreground">
-              <div className="font-bold">MS in IS</div>
-              <div className="text-muted-foreground">UMBC</div>
+              <div className="font-bold">Master's in Information Systems</div>
+              <div className="text-muted-foreground">University of Maryland, Baltimore County</div>
             </div>
             <div>
               <div className="font-bold">Google & IBM</div>
