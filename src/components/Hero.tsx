@@ -79,7 +79,7 @@ export const Hero = () => {
             </div>
             <div className="border-r border-foreground">
               <div className="font-bold">Master's in Information Systems</div>
-              <div className="text-muted-foreground">University of Maryland, Baltimore County</div>
+              <div className="text-muted-foreground">University of Maryland</div>
             </div>
             <div>
               <div className="font-bold">Google & IBM</div>
