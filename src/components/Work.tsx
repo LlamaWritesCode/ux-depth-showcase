@@ -102,10 +102,25 @@ export const Work = () => {
                   {/* <span className="text-2xl group-hover:translate-x-2 transition-transform duration-300">
                     →
                   </span> */}
-                  {(project.title === 'SoundCloud Redesign' || project.title === 'AI Remix My Design') && (
-                    <button className="border-2 border-foreground px-4 py-1 text-sm font-mono uppercase tracking-wider bg-foreground text-background hover:bg-background hover:text-foreground transition-all duration-200">
+                  {project.title === 'SoundCloud Redesign' && (
+                    <a 
+                      href="https://www.canva.com/design/DAG6CNTTykM/KX4Qkk-uSyHiUsdrQtcrbQ/edit?utm_content=DAG6CNTTykM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border-2 border-foreground px-4 py-1 text-sm font-mono uppercase tracking-wider bg-foreground text-background hover:bg-background hover:text-foreground transition-all duration-200"
+                    >
                       View
-                    </button>
+                    </a>
+                  )}
+                  {project.title === 'AI Remix My Design' && (
+                    <a 
+                      href="https://devpost.com/software/ai-remix-my-design"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border-2 border-foreground px-4 py-1 text-sm font-mono uppercase tracking-wider bg-foreground text-background hover:bg-background hover:text-foreground transition-all duration-200"
+                    >
+                      View
+                    </a>
                   )}
                 </div>
               </motion.article>
