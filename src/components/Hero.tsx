@@ -49,12 +49,12 @@ export const Hero = () => {
             </div>
           </motion.div>
 
-          {/* CTA Button - newspaper style */}
+          {/* CTA Buttons - newspaper style */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="text-center"
+            className="text-center flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <motion.a
               href="#work"
@@ -63,6 +63,16 @@ export const Hero = () => {
               whileTap={{ scale: 0.98 }}
             >
               View Portfolio →
+            </motion.a>
+            <motion.a
+              href="/Somya_Singh_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-12 py-4 border-4 border-foreground bg-background text-foreground font-serif font-bold text-lg tracking-wide uppercase hover:bg-foreground hover:text-background transition-all duration-300 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              View Resume →
             </motion.a>
           </motion.div>
 
