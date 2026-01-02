@@ -109,3 +109,14 @@ All colors MUST be HSL.
     text-wrap: balance;
   }
 }
+
+/* Hide default cursor when custom cursor is active */
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+  
+  a, button, [role="button"], input, textarea, select {
+    cursor: none;
+  }
+}
