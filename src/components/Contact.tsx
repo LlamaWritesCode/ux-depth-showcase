@@ -92,7 +92,7 @@ export const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Newsletter signup - newspaper style */}
+          {/* Resume download - newspaper style */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -101,21 +101,19 @@ export const Contact = () => {
           >
             <div className="text-center">
               <h3 className="text-2xl font-serif font-bold mb-4">
-                Subscribe to Updates
+                View Resume
               </h3>
               <p className="font-serif mb-6">
-                Get the latest design insights and project updates delivered to your inbox.
+                Download my resume to learn more about my experience and skills.
               </p>
-              <div className="flex gap-2 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="your.email@example.com"
-                  className="flex-1 border-2 border-background px-4 py-2 font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-background"
-                />
-                <button className="border-2 border-background bg-background text-foreground px-6 py-2 font-serif font-bold hover:bg-transparent hover:text-background transition-all duration-300">
-                  Subscribe
-                </button>
-              </div>
+              <a
+                href="/Somya_Singh_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block border-2 border-background bg-background text-foreground px-8 py-3 font-serif font-bold hover:bg-transparent hover:text-background transition-all duration-300"
+              >
+                Download Resume →
+              </a>
             </div>
           </motion.div>
         </div>
