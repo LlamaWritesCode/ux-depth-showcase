@@ -54,7 +54,7 @@ export const CustomCursor = () => {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-difference"
+      className="fixed top-0 left-0 pointer-events-none z-[9999]"
       animate={{
         x: mousePosition.x - 12,
         y: mousePosition.y - 24,
@@ -78,36 +78,33 @@ export const CustomCursor = () => {
         viewBox="0 0 24 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="drop-shadow-sm"
+        className="drop-shadow-md"
       >
         {/* Feather quill */}
         <path
           d="M22 2C22 2 18 4 16 8C14 12 12 18 10 22C8 26 6 30 6 30"
-          stroke="currentColor"
-          strokeWidth="1.5"
+          stroke="#1a1a1a"
+          strokeWidth="2"
           strokeLinecap="round"
           fill="none"
-          className="text-foreground"
         />
         {/* Feather detail */}
         <path
           d="M22 2C20 4 18 6 17 8C16 10 15.5 12 15 14C17 12 19 10 21 7C22 5.5 22.5 3.5 22 2Z"
-          fill="currentColor"
-          className="text-foreground"
+          fill="#1a1a1a"
         />
         <path
           d="M16 8C14 10 13 12 12 15C14 13 16 11 17.5 8.5"
-          stroke="currentColor"
-          strokeWidth="1"
+          stroke="#1a1a1a"
+          strokeWidth="1.5"
           strokeLinecap="round"
           fill="none"
-          className="text-foreground opacity-60"
+          opacity="0.7"
         />
         {/* Pen tip */}
         <path
           d="M6 30L7 27L9 28L6 30Z"
-          fill="currentColor"
-          className="text-foreground"
+          fill="#1a1a1a"
         />
       </svg>
       
