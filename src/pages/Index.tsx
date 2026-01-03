@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Hero } from '@/components/Hero';
 import { About } from '@/components/About';
 import { Work } from '@/components/Work';
@@ -7,6 +8,10 @@ import { CustomCursor } from '@/components/CustomCursor';
 import { Navigation } from '@/components/Navigation';
 
 const Index = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <CustomCursor />
