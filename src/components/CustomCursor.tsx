@@ -41,7 +41,8 @@ export const CustomCursor = () => {
     const updateMousePosition = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
       setIsVisible(true);
-      addInkDot(e.clientX, e.clientY);
+      // Offset to match quill tip position (tip is at x=6, y=30 in 24x32 SVG, cursor offset is -12, -24)
+      addInkDot(e.clientX - 6, e.clientY + 6);
     };
 
     const handleMouseEnter = () => setIsVisible(true);
