@@ -4,6 +4,29 @@ import { useRef } from 'react';
 import { NewspaperDoodles } from './NewspaperDoodles';
 import aboutIllustration from '@/assets/about-illustration.png';
 
+const sectionVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: [0.25, 0.4, 0.25, 1],
+    },
+  },
+};
+
 export const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
@@ -16,17 +39,16 @@ export const About = () => {
       <div className="absolute inset-0 opacity-5 bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,currentColor_2px,currentColor_3px)]" />
       
       <div className="container mx-auto px-6 relative z-10">
-        <div ref={ref} className="max-w-4xl mx-auto">
+        <motion.div 
+          ref={ref} 
+          className="max-w-4xl mx-auto"
+          variants={sectionVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
           {/* Newspaper section header */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { 
-              opacity: 1, 
-              y: 0 
-            } : {}}
-            transition={{ 
-              duration: 0.6
-            }}
+            variants={itemVariants}
             className="mb-16 text-center"
           >
             <div className="inline-block border-4 border-foreground px-8 py-3 bg-foreground text-background shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-shadow duration-300">
@@ -38,9 +60,7 @@ export const About = () => {
 
           {/* Illustration */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            variants={itemVariants}
             className="mb-12 -mt-16 relative"
           >
             <motion.img 
@@ -104,9 +124,7 @@ export const About = () => {
 
           {/* Article-style content */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            variants={itemVariants}
             className="border-4 border-foreground bg-card p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]"
           >
             {/* Newspaper columns */}
@@ -155,7 +173,7 @@ export const About = () => {
               </div>
             </div>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
