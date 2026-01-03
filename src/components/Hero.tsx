@@ -64,16 +64,6 @@ export const Hero = () => {
             >
               View Portfolio →
             </motion.a>
-            <motion.a
-              href="/Somya_Singh_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-12 py-4 border-4 border-foreground bg-background text-foreground font-serif font-bold text-lg tracking-wide uppercase hover:bg-foreground hover:text-background transition-all duration-300 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              View Resume →
-            </motion.a>
           </motion.div>
 
           {/* Decorative newspaper elements */}

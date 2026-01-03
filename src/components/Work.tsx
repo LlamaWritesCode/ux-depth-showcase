@@ -104,7 +104,7 @@ export const Work = () => {
                   </span> */}
                   {project.title === 'SoundCloud Redesign' && (
                     <a 
-                      href="https://www.canva.com/design/DAG6CNTTykM/KX4Qkk-uSyHiUsdrQtcrbQ/edit?utm_content=DAG6CNTTykM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                      href="https://www.behance.net/gallery/241400707/SoundCloud-Redesign"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="border-2 border-foreground px-4 py-1 text-sm font-mono uppercase tracking-wider bg-foreground text-background hover:bg-background hover:text-foreground transition-all duration-200"
