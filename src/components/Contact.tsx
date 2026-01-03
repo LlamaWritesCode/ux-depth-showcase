@@ -107,7 +107,7 @@ export const Contact = () => {
                 Download my resume to learn more about my experience and skills.
               </p>
               <a
-                href="https://docs.google.com/document/d/1Vk0hmgcJoPH9omvPMMcx4Q-0sT1byemQnSsOaaqZFro/edit?tab=t.jc43phekxono"
+                href="/Somya_Singh_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block border-2 border-background bg-background text-foreground px-8 py-3 font-serif font-bold hover:bg-transparent hover:text-background transition-all duration-300"
