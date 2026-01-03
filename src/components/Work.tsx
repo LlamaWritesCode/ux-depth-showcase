@@ -134,9 +134,14 @@ export const Work = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-center mt-12"
           >
-            <button className="border-4 border-foreground px-10 py-3 font-serif font-bold text-lg uppercase bg-background hover:bg-foreground hover:text-background transition-all duration-300 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1">
+            <a
+              href="https://www.behance.net/somyasingh53"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border-4 border-foreground px-10 py-3 font-serif font-bold text-lg uppercase bg-background hover:bg-foreground hover:text-background transition-all duration-300 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1"
+            >
               View All Projects
-            </button>
+            </a>
           </motion.div>
         </div>
       </div>
