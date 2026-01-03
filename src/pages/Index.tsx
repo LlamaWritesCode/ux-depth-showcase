@@ -4,11 +4,13 @@ import { Work } from '@/components/Work';
 import { Skills } from '@/components/Skills';
 import { Contact } from '@/components/Contact';
 import { CustomCursor } from '@/components/CustomCursor';
+import { Navigation } from '@/components/Navigation';
 
 const Index = () => {
   return (
     <>
       <CustomCursor />
+      <Navigation />
       <main className="overflow-x-hidden">
         <Hero />
         <About />
