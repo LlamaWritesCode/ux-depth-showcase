@@ -15,14 +15,14 @@ const projects = [
     title: 'SoundCloud Redesign',
     category: 'UX Redesign',
     description: 'Redesigned the SoundCloud website and logo, improving navigation, user flows, and visual consistency across 5+ screens with accessibility best practices.',
-    year: '2024',
+    year: '2025',
     company: 'Personal Project',
   },
   {
     title: 'AI Remix My Design',
     category: 'Product Design',
     description: 'Designed an AI tool with Figma and Adobe Express APIs, enabling rapid UI mockup transformations into multiple themes, cutting redesign effort by 50%.',
-    year: '2024',
+    year: '2025',
     company: 'Personal Project',
   },
   {
