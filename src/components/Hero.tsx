@@ -57,7 +57,7 @@ export const Hero = () => {
             className="text-center flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <motion.a
-              href="#work"
+              href="#about"
               className="inline-block px-12 py-4 border-4 border-foreground bg-foreground text-background font-serif font-bold text-lg tracking-wide uppercase hover:bg-background hover:text-foreground transition-all duration-300 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -74,12 +74,12 @@ export const Hero = () => {
             className="mt-20 grid grid-cols-3 gap-4 text-center text-xs uppercase tracking-wider font-mono border-t border-b border-foreground py-4"
           >
             <div className="border-r border-foreground">
-              <div className="font-bold">Est. 2022</div>
-              <div className="text-muted-foreground">Since</div>
-            </div>
-            <div className="border-r border-foreground">
               <div className="font-bold">Master's in Information Systems</div>
               <div className="text-muted-foreground">University of Maryland</div>
+            </div>
+            <div className="border-r border-foreground">
+              <div className="font-bold">Specialization in Data Science, HCI & UX Design</div>
+              <div className="text-muted-foreground">Focus Areas</div>
             </div>
             <div>
               <div className="font-bold">Google & IBM</div>
