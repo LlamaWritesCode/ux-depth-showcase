@@ -78,7 +78,7 @@ export const Hero = () => {
               <div className="text-muted-foreground">University of Maryland</div>
             </div>
             <div className="border-r border-foreground">
-              <div className="font-bold">Specialization in Data Science, HCI & UX Design</div>
+              <div className="font-bold">Data Science, HCI & UX Design</div>
               <div className="text-muted-foreground">Focus Areas</div>
             </div>
             <div>
