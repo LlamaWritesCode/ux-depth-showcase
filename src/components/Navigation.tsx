@@ -32,7 +32,11 @@ export const Navigation = () => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="fixed top-0 left-0 right-0 z-50 bg-transparent"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled 
+            ? 'bg-background/80 backdrop-blur-md shadow-sm' 
+            : 'bg-transparent'
+        }`}
       >
         <div className="container mx-auto px-6 lg:px-12">
           <nav className="flex items-center justify-between h-16 md:h-20">
