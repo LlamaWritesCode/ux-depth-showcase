@@ -19,10 +19,10 @@ const Index = () => {
       <Navigation />
       <main className="overflow-x-hidden">
         <Hero />
+        <About />
         <Work />
         <Tools />
         <Skills />
-        <About />
         <Contact />
       </main>
     </>
