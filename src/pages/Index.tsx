@@ -7,6 +7,9 @@ import { Skills } from '@/components/Skills';
 import { Contact } from '@/components/Contact';
 import { Navigation } from '@/components/Navigation';
 
+// Section order matches somya-singh.com:
+// Hero -> About -> Work -> Tools (Expertise) -> Skills -> Contact
+
 const Index = () => {
   useEffect(() => {
     window.scrollTo(0, 0);

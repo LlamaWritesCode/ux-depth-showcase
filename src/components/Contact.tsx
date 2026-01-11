@@ -30,77 +30,77 @@ export const Contact = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="mb-12"
           >
-            <p className="text-sm font-medium text-muted-foreground tracking-wide uppercase mb-3">
-              Get in touch 💬
-            </p>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-              Let's work together
+              Let's Connect
             </h2>
             <p className="text-xl text-muted-foreground">
               Have a project in mind? Let's create something amazing together.
             </p>
           </motion.div>
 
-          {/* Main CTA Card */}
+          {/* Main CTA Button */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-background rounded-3xl p-8 md:p-12 shadow-lg mb-8"
+            className="mb-12"
           >
-            {/* Email CTA */}
-            <div className="text-center mb-10">
-              <motion.a
-                href="mailto:ssingh12@umbc.edu"
-                className="inline-flex items-center gap-3 px-10 py-5 bg-primary text-primary-foreground font-semibold text-lg rounded-full hover:opacity-90 transition-opacity"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Get in Touch
-                <ArrowUpRight className="w-5 h-5" />
-              </motion.a>
-            </div>
-
-            {/* Divider */}
-            <div className="border-t border-border my-8" />
-
-            {/* Social links */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {socials.map((social, index) => (
-                <motion.a
-                  key={index}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                  className="flex flex-col items-center gap-3 p-6 bg-muted rounded-2xl hover:bg-accent transition-colors"
-                >
-                  <social.icon className="w-7 h-7" />
-                  <span className="text-sm font-medium">{social.label}</span>
-                </motion.a>
-              ))}
-            </div>
+            <motion.a
+              href="mailto:ssingh12@umbc.edu"
+              className="inline-flex items-center gap-3 px-10 py-5 bg-primary text-primary-foreground font-semibold text-lg rounded-full hover:opacity-90 transition-opacity"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              Get in Touch →
+            </motion.a>
           </motion.div>
 
-          {/* Resume link */}
+          {/* Social links */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-center"
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
           >
+            {socials.map((social, index) => (
+              <motion.a
+                key={index}
+                href={social.href}
+                target={social.label !== 'Email' ? '_blank' : undefined}
+                rel={social.label !== 'Email' ? 'noopener noreferrer' : undefined}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                className="flex flex-col items-center gap-3 p-6 bg-background rounded-2xl hover:shadow-lg transition-all duration-300"
+              >
+                <social.icon className="w-7 h-7" />
+                <span className="text-sm font-medium">{social.label}</span>
+              </motion.a>
+            ))}
+          </motion.div>
+
+          {/* Resume section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="bg-background rounded-2xl p-8"
+          >
+            <h3 className="text-xl font-bold mb-2">View Resume</h3>
+            <p className="text-muted-foreground mb-4">
+              Download my resume to learn more about my experience and skills.
+            </p>
             <a
               href="/Somya_Singh_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-full text-muted-foreground hover:text-foreground hover:border-foreground transition-colors font-medium"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-full text-foreground hover:bg-muted transition-colors font-medium"
             >
               <FileText className="w-4 h-4" />
-              View Resume
+              Download Resume
+              <ArrowUpRight className="w-4 h-4" />
             </a>
           </motion.div>
         </div>
@@ -110,7 +110,7 @@ export const Contact = () => {
       <motion.footer
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
-        transition={{ duration: 0.6, delay: 0.8 }}
+        transition={{ duration: 0.6, delay: 0.7 }}
         className="mt-20 text-center"
       >
         <p className="text-sm text-muted-foreground">

@@ -9,30 +9,34 @@ const projects = [
     category: 'UX/UI DESIGN',
     description: 'Designed end-to-end user experiences for a CMS framework, translating research into scalable UI components adopted across 10+ internal products.',
     company: 'Sparksoft Corp',
-    color: 'bg-accent-pink',
+    year: '2022-2024',
+    color: 'bg-accent',
   },
   {
     title: 'SoundCloud Redesign',
     category: 'UX REDESIGN',
     description: 'Redesigned the SoundCloud website and logo, improving navigation, user flows, and visual consistency across 5+ screens with accessibility best practices.',
     company: 'Personal Project',
+    year: '2025',
     link: 'https://www.behance.net/gallery/241400707/SoundCloud-Redesign',
-    color: 'bg-accent',
+    color: 'bg-secondary',
   },
   {
     title: 'AI Remix My Design',
     category: 'PRODUCT DESIGN',
     description: 'Designed an AI tool with Figma and Adobe Express APIs, enabling rapid UI mockup transformations into multiple themes, cutting redesign effort by 50%.',
     company: 'Personal Project',
+    year: '2025',
     link: 'https://devpost.com/software/ai-remix-my-design',
-    color: 'bg-secondary',
+    color: 'bg-muted',
   },
   {
     title: 'Healthcare UX',
     category: 'UX RESEARCH & DESIGN',
     description: 'Conducted user-centered analysis to translate business goals into end-to-end workflows and traceability matrices, supporting 5+ core product features.',
     company: 'Optum',
-    color: 'bg-muted',
+    year: '2022',
+    color: 'bg-accent',
   },
 ];
 
@@ -51,12 +55,12 @@ export const Work = () => {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <p className="text-sm font-medium text-muted-foreground tracking-wide uppercase mb-3">
-              Featured Work ✨
-            </p>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Projects I've worked on
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-3">
+              Featured Work
             </h2>
+            <p className="text-xl text-muted-foreground">
+              Selected Projects & Case Studies
+            </p>
           </motion.div>
 
           {/* Project cards */}
@@ -67,45 +71,46 @@ export const Work = () => {
                 initial={{ opacity: 0, y: 40 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`${project.color} rounded-3xl p-8 md:p-12 group cursor-pointer hover:shadow-xl transition-shadow duration-300`}
+                className={`${project.color} rounded-3xl p-8 md:p-12 group cursor-pointer hover:shadow-xl transition-all duration-300`}
               >
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
                   <div className="flex-1">
+                    {/* Company tag */}
+                    <p className="text-sm font-medium text-muted-foreground mb-2">
+                      {project.company}
+                    </p>
+                    
+                    {/* Title */}
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                      {project.title}
+                    </h3>
+
                     {/* Category */}
                     <p className="text-xs font-semibold tracking-widest text-muted-foreground mb-4">
                       {project.category}
                     </p>
                     
-                    {/* Title */}
-                    <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                      {project.title}
-                    </h3>
-                    
                     {/* Description */}
-                    <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl">
+                    <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mb-4">
                       {project.description}
                     </p>
                     
-                    {/* Company tag */}
-                    <p className="mt-6 text-sm font-medium text-muted-foreground">
-                      {project.company}
-                    </p>
-                  </div>
-                  
-                  {/* Action buttons */}
-                  {project.link && (
-                    <div className="flex gap-3">
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground font-semibold text-sm rounded-full hover:opacity-90 transition-opacity"
-                      >
-                        Case study
-                        <ArrowUpRight className="w-4 h-4" />
-                      </a>
+                    {/* Year and link */}
+                    <div className="flex items-center gap-4">
+                      <span className="text-sm text-muted-foreground">{project.year}</span>
+                      {project.link && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-sm font-medium text-foreground hover:underline"
+                        >
+                          View
+                          <ArrowUpRight className="w-4 h-4" />
+                        </a>
+                      )}
                     </div>
-                  )}
+                  </div>
                 </div>
               </motion.article>
             ))}
