@@ -20,10 +20,10 @@ export const Navigation = () => {
   };
 
   const navLinks = [
+    { label: 'About', href: '#about' },
     { label: 'Work', href: '#work' },
     { label: 'Tools', href: '#tools' },
     { label: 'Skills', href: '#skills' },
-    { label: 'About', href: '#about' },
   ];
 
   return (
