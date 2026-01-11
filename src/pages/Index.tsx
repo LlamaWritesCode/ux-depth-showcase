@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Hero } from '@/components/Hero';
 import { About } from '@/components/About';
 import { Work } from '@/components/Work';
+import { Tools } from '@/components/Tools';
 import { Skills } from '@/components/Skills';
 import { Contact } from '@/components/Contact';
 import { CustomCursor } from '@/components/CustomCursor';
@@ -18,9 +19,10 @@ const Index = () => {
       <Navigation />
       <main className="overflow-x-hidden">
         <Hero />
-        <About />
         <Work />
+        <Tools />
         <Skills />
+        <About />
         <Contact />
       </main>
     </>

@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Mail, Linkedin, Github } from 'lucide-react';
-import { NewspaperDoodles } from './NewspaperDoodles';
+import { Mail, Linkedin, Github, ArrowUpRight, FileText } from 'lucide-react';
 
 // Behance icon component
 const Behance = ({ className }: { className?: string }) => (
@@ -23,52 +22,49 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-32 relative overflow-hidden bg-background border-t-4 border-foreground">
-      <NewspaperDoodles />
-      
-      {/* Newspaper texture overlay */}
-      <div className="absolute inset-0 opacity-5 bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,currentColor_2px,currentColor_3px)]" />
-      
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="contact" className="py-24 md:py-32 bg-muted/50">
+      <div className="container mx-auto px-6">
         <div ref={ref} className="max-w-4xl mx-auto">
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="mb-16 text-center"
+            className="text-center mb-12"
           >
-            <div className="inline-block border-4 border-foreground px-8 py-3 bg-foreground text-background mb-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-shadow duration-300">
-              <h2 className="text-5xl md:text-6xl font-serif font-bold tracking-tight">
-                Let's Connect
-              </h2>
-            </div>
-            <p className="text-xl md:text-2xl font-serif">
+            <p className="text-sm font-medium text-muted-foreground tracking-wide uppercase mb-3">
+              Get in touch 💬
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+              Let's work together
+            </h2>
+            <p className="text-xl text-muted-foreground">
               Have a project in mind? Let's create something amazing together.
             </p>
           </motion.div>
 
-          {/* Contact card */}
+          {/* Main CTA Card */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="border-4 border-foreground bg-card p-12 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] mb-12"
+            className="bg-background rounded-3xl p-8 md:p-12 shadow-lg mb-8"
           >
             {/* Email CTA */}
-            <div className="text-center mb-12">
+            <div className="text-center mb-10">
               <motion.a
                 href="mailto:ssingh12@umbc.edu"
-                className="inline-block border-4 border-foreground px-12 py-4 font-serif font-bold text-2xl bg-foreground text-background hover:bg-background hover:text-foreground transition-all duration-300 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1"
+                className="inline-flex items-center gap-3 px-10 py-5 bg-primary text-primary-foreground font-semibold text-lg rounded-full hover:opacity-90 transition-opacity"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Get in Touch →
+                Get in Touch
+                <ArrowUpRight className="w-5 h-5" />
               </motion.a>
             </div>
 
             {/* Divider */}
-            <div className="border-t-2 border-foreground my-8" />
+            <div className="border-t border-border my-8" />
 
             {/* Social links */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -76,45 +72,36 @@ export const Contact = () => {
                 <motion.a
                   key={index}
                   href={social.href}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                  className="border-2 border-foreground p-6 flex flex-col items-center justify-center gap-3 hover:bg-foreground hover:text-background transition-all duration-300 group"
-                  whileHover={{ y: -4 }}
-                  aria-label={social.label}
+                  className="flex flex-col items-center gap-3 p-6 bg-muted rounded-2xl hover:bg-accent transition-colors"
                 >
-                  <social.icon className="w-8 h-8" />
-                  <span className="font-mono text-sm uppercase tracking-wider">
-                    {social.label}
-                  </span>
+                  <social.icon className="w-7 h-7" />
+                  <span className="text-sm font-medium">{social.label}</span>
                 </motion.a>
               ))}
             </div>
           </motion.div>
 
-          {/* Resume download - newspaper style */}
+          {/* Resume link */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="border-4 border-foreground bg-foreground text-background p-8"
+            className="text-center"
           >
-            <div className="text-center">
-              <h3 className="text-2xl font-serif font-bold mb-4">
-                View Resume
-              </h3>
-              <p className="font-serif mb-6">
-                Download my resume to learn more about my experience and skills.
-              </p>
-              <a
-                href="/Somya_Singh_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block border-2 border-background bg-background text-foreground px-8 py-3 font-serif font-bold hover:bg-transparent hover:text-background transition-all duration-300"
-              >
-                View Resume →
-              </a>
-            </div>
+            <a
+              href="/Somya_Singh_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-full text-muted-foreground hover:text-foreground hover:border-foreground transition-colors font-medium"
+            >
+              <FileText className="w-4 h-4" />
+              View Resume
+            </a>
           </motion.div>
         </div>
       </div>
@@ -124,9 +111,9 @@ export const Contact = () => {
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.6, delay: 0.8 }}
-        className="mt-20 pt-8 border-t-2 border-foreground text-center relative z-10"
+        className="mt-20 text-center"
       >
-        <p className="font-mono text-sm uppercase tracking-widest">
+        <p className="text-sm text-muted-foreground">
           © {new Date().getFullYear()} Somya Singh • All Rights Reserved
         </p>
       </motion.footer>

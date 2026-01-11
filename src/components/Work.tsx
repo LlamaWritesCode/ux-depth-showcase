@@ -1,36 +1,38 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { NewspaperDoodles } from './NewspaperDoodles';
+import { ArrowUpRight } from 'lucide-react';
 
 const projects = [
   {
     title: 'CMS Framework Design',
-    category: 'UX/UI Design',
+    category: 'UX/UI DESIGN',
     description: 'Designed end-to-end user experiences for a CMS framework, translating research into scalable UI components adopted across 10+ internal products.',
-    year: '2022-2024',
     company: 'Sparksoft Corp',
+    color: 'bg-accent-pink',
   },
   {
     title: 'SoundCloud Redesign',
-    category: 'UX Redesign',
+    category: 'UX REDESIGN',
     description: 'Redesigned the SoundCloud website and logo, improving navigation, user flows, and visual consistency across 5+ screens with accessibility best practices.',
-    year: '2025',
     company: 'Personal Project',
+    link: 'https://www.behance.net/gallery/241400707/SoundCloud-Redesign',
+    color: 'bg-accent',
   },
   {
     title: 'AI Remix My Design',
-    category: 'Product Design',
+    category: 'PRODUCT DESIGN',
     description: 'Designed an AI tool with Figma and Adobe Express APIs, enabling rapid UI mockup transformations into multiple themes, cutting redesign effort by 50%.',
-    year: '2025',
     company: 'Personal Project',
+    link: 'https://devpost.com/software/ai-remix-my-design',
+    color: 'bg-secondary',
   },
   {
     title: 'Healthcare UX',
-    category: 'UX Research & Design',
+    category: 'UX RESEARCH & DESIGN',
     description: 'Conducted user-centered analysis to translate business goals into end-to-end workflows and traceability matrices, supporting 5+ core product features.',
-    year: '2022',
     company: 'Optum',
+    color: 'bg-muted',
   },
 ];
 
@@ -39,88 +41,70 @@ export const Work = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="work" className="py-32 relative overflow-hidden bg-background border-t-4 border-foreground">
-      <NewspaperDoodles />
-      
-      {/* Newspaper texture overlay */}
-      <div className="absolute inset-0 opacity-5 bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,currentColor_2px,currentColor_3px)]" />
-      
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="work" className="py-24 md:py-32 bg-background">
+      <div className="container mx-auto px-6">
         <div ref={ref}>
           {/* Section header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="mb-16 text-center"
+            className="mb-16"
           >
-            <div className="inline-block border-4 border-foreground px-8 py-3 bg-foreground text-background shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-shadow duration-300">
-              <h2 className="text-5xl md:text-6xl font-serif font-bold tracking-tight">
-                Featured Work
-              </h2>
-            </div>
-            <div className="mt-6 text-sm uppercase tracking-widest font-mono text-muted-foreground">
-              Selected Projects & Case Studies
-            </div>
+            <p className="text-sm font-medium text-muted-foreground tracking-wide uppercase mb-3">
+              Featured Work ✨
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+              Projects I've worked on
+            </h2>
           </motion.div>
 
-          {/* Project listings - newspaper classified style */}
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+          {/* Project cards */}
+          <div className="space-y-6">
             {projects.map((project, index) => (
               <motion.article
                 key={index}
                 initial={{ opacity: 0, y: 40 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="border-4 border-foreground bg-card p-8 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
+                className={`${project.color} rounded-3xl p-8 md:p-12 group cursor-pointer hover:shadow-xl transition-shadow duration-300`}
               >
-                {/* Project number */}
-                <div className="text-xs font-mono tracking-wider mb-4 text-muted-foreground">
-                  {project.company}
-                </div>
-                
-                {/* Title */}
-                <h3 className="text-3xl font-serif font-bold mb-3 group-hover:underline decoration-4 decoration-foreground underline-offset-4">
-                  {project.title}
-                </h3>
-                
-                {/* Category badge */}
-                <div className="inline-block border-2 border-foreground px-4 py-1 text-xs font-mono uppercase tracking-wider mb-4 bg-foreground text-background">
-                  {project.category}
-                </div>
-                
-                {/* Description */}
-                <p className="font-serif text-lg leading-relaxed mb-4">
-                  {project.description}
-                </p>
-                
-                {/* Footer with year */}
-                <div className="border-t-2 border-foreground pt-4 flex justify-between items-center">
-                  <span className="text-sm font-mono uppercase tracking-wider">
-                    {project.year}
-                  </span>
-                  {/* <span className="text-2xl group-hover:translate-x-2 transition-transform duration-300">
-                    →
-                  </span> */}
-                  {project.title === 'SoundCloud Redesign' && (
-                    <a 
-                      href="https://www.behance.net/gallery/241400707/SoundCloud-Redesign"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="border-2 border-foreground px-4 py-1 text-sm font-mono uppercase tracking-wider bg-foreground text-background hover:bg-background hover:text-foreground transition-all duration-200"
-                    >
-                      View
-                    </a>
-                  )}
-                  {project.title === 'AI Remix My Design' && (
-                    <a 
-                      href="https://devpost.com/software/ai-remix-my-design"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="border-2 border-foreground px-4 py-1 text-sm font-mono uppercase tracking-wider bg-foreground text-background hover:bg-background hover:text-foreground transition-all duration-200"
-                    >
-                      View
-                    </a>
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+                  <div className="flex-1">
+                    {/* Category */}
+                    <p className="text-xs font-semibold tracking-widest text-muted-foreground mb-4">
+                      {project.category}
+                    </p>
+                    
+                    {/* Title */}
+                    <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                      {project.title}
+                    </h3>
+                    
+                    {/* Description */}
+                    <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl">
+                      {project.description}
+                    </p>
+                    
+                    {/* Company tag */}
+                    <p className="mt-6 text-sm font-medium text-muted-foreground">
+                      {project.company}
+                    </p>
+                  </div>
+                  
+                  {/* Action buttons */}
+                  {project.link && (
+                    <div className="flex gap-3">
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground font-semibold text-sm rounded-full hover:opacity-90 transition-opacity"
+                      >
+                        Case study
+                        <ArrowUpRight className="w-4 h-4" />
+                      </a>
+                    </div>
                   )}
                 </div>
               </motion.article>
@@ -138,9 +122,10 @@ export const Work = () => {
               href="https://www.behance.net/somyasingh53"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block border-4 border-foreground px-10 py-3 font-serif font-bold text-lg uppercase bg-background hover:bg-foreground hover:text-background transition-all duration-300 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:opacity-90 transition-opacity"
             >
               View All Projects
+              <ArrowUpRight className="w-5 h-5" />
             </a>
           </motion.div>
         </div>
