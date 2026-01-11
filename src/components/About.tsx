@@ -31,10 +31,10 @@ export const About = () => {
             transition={{ duration: 0.6 }}
           >
             <p className="text-sm font-medium text-muted-foreground tracking-wide uppercase mb-3">
-              About me 👋
+              A little bit about myself 👋
             </p>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-              A little bit about myself
+              About me
             </h2>
             
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed mb-10">
