@@ -35,20 +35,20 @@ export const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <motion.a
-              href="#work"
-              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground font-semibold text-base rounded-full hover:opacity-90 transition-opacity"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              My work
-            </motion.a>
-            <motion.a
               href="#about"
-              className="inline-flex items-center justify-center px-8 py-4 bg-background text-foreground font-semibold text-base rounded-full border border-border hover:bg-muted transition-colors"
+              className="inline-flex items-center justify-center px-10 py-4 bg-transparent text-[#1e1b4b] font-semibold text-base rounded-full border-2 border-[#1e1b4b] hover:bg-[#1e1b4b] hover:text-white transition-colors"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
               About me
+            </motion.a>
+            <motion.a
+              href="#work"
+              className="inline-flex items-center justify-center px-10 py-4 bg-[#1e1b4b] text-white font-semibold text-base rounded-full hover:bg-[#2d2a5e] transition-colors"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              My work
             </motion.a>
           </motion.div>
         </div>
