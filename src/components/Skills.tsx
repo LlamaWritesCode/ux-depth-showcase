@@ -67,7 +67,7 @@ export const Skills = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
-                className="bg-background rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300"
+                className="bg-background rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
               >
                 <div className="w-14 h-14 bg-accent rounded-2xl flex items-center justify-center mb-6">
                   <skill.icon className="w-7 h-7 text-foreground" />
