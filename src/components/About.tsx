@@ -17,19 +17,22 @@ export const About = () => {
           >
             {/* Greeting */}
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-              Hi, I'm Somya! 👋
+              About the Designer 👋
             </h2>
             
             {/* Bio paragraphs */}
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed mb-8">
               <p>
-                UX Designer pursuing my Master's in Information Systems at UMBC.
+                I'm a UX Designer pursuing my Master's in Information Systems at UMBC, specializing in Data Science, HCI & UX Design. I create scalable, accessible experiences through research and collaboration.
               </p>
               <p>
-                I have 3+ years of experience in designing scalable, accessible experiences through research-driven design and cross-functional collaboration.
+                My approach combines user-centered design thinking with data-driven insights, ensuring every decision is backed by research and real user feedback.
               </p>
               <p>
-                If you have a project in mind, don't hesitate to reach out.
+                At Sparksoft Corp and Optum, I designed end-to-end user experiences, conducted usability testing, and improved task success rates by 25% while meeting WCAG 2.1 accessibility standards.
+              </p>
+              <p>
+                I'm certified in Google UX Design, Google Project Management, and IBM Scrum Master—bringing a holistic understanding of design and delivery.
               </p>
             </div>
 
